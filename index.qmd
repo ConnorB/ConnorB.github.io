@@ -2,6 +2,7 @@
 title: "Connor Brown"
 description: "Aquatic Ecologist and Ph.D. Candidate Studying Non-Perennial Streams"
 page-layout: full
+css: styles.css
 ---
 
 ::::: grid
