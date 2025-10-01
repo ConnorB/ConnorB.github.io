@@ -1,1 +1,21 @@
 /* css styles */
+.social-icons {
+  display: flex;
+  justify-content: center;   /* center the icons */
+  gap: 20px;                 /* equal spacing between them */
+  margin-top: 0px;
+  font-size: 1.5em;          /* adjust icon size */
+}
+
+.social-icons a {
+  color: inherit;            /* inherit text/icon color */
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #0077b6;            /* highlight color on hover */
+}
+
+img.rounded {
+  margin-bottom: 0;   /* remove space under the image */
+}
