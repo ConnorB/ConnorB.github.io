@@ -6,7 +6,6 @@ project:
 execute:
   freeze: auto
 website:
-  title: "Connor Brown"
   site-url: https://ConnorB.github.io
 
   # Navbar with social links
