@@ -7,6 +7,16 @@ page-layout: full
 ::::: grid
 ::: g-col-4
 ![](assets/images/bio-photo.jpg){.rounded width="100%" fig-align="center"}
+
+<div class="social-icons">
+[{{< fa brands github >}}](https://github.com/ConnorB){target="_blank"} &nbsp;
+[{{< fa brands mastodon >}}](https://mastodon.world/@connorbrown){target="_blank"} &nbsp;
+[{{< fa brands instagram >}}](https://instagram.com/conbro_){target="_blank"} &nbsp;
+[{{< fa brands bluesky >}}](https://bsky.app/profile/connorbrown.bsky.social){target="_blank"} &nbsp;
+[{{< fa brands twitter >}}](https://twitter.com/eco_conn){target="_blank"} &nbsp;
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en){target="_blank"} &nbsp;
+[{{< fa brands orcid >}}](https://orcid.org/0000-0002-9680-8930){target="_blank"}
+</div>
 :::
 
 ::: g-col-8

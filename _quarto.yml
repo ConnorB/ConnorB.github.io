@@ -17,21 +17,6 @@ website:
         href: publications.qmd
       - text: Teaching
         href: teaching.qmd
-    right:
-      - icon: github
-        href: https://github.com/ConnorB
-      - icon: mastodon
-        href: https://mastodon.world/@connorbrown
-      - icon: instagram
-        href: https://instagram.com/conbro_
-      - icon: bluesky   
-        href: https://bsky.app/profile/connorbrown.bsky.social
-      - icon: twitter
-        href: https://twitter.com/eco_conn
-      - text: "{{< fa brands google-scholar >}}"
-        href: https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en
-      - text: "{{< fa brands orcid >}}"
-        href: https://orcid.org/0000-0002-9680-8930
   # Footer with same social links
   page-footer:
     left: |
@@ -43,7 +28,7 @@ website:
         href: https://mastodon.world/@connorbrown
       - icon: instagram
         href: https://instagram.com/conbro_
-      - icon: bluesky
+      - text: "{{< fa brands bluesky >}}"
         href: https://bsky.app/profile/connorbrown.bsky.social
       - icon: twitter
         href: https://twitter.com/eco_conn
