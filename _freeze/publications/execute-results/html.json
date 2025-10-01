@@ -1,0 +1,15 @@
+{
+  "hash": "dae9666b218a4da8d48d51157e246e96",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Publications\"\ntoc: true\nnumber-sections: false\nformat:\n  html:\n    section-divs: false   # helps ToC + clean inserted HTML\n---\n\n\n::: {.cell}\n\n:::\n\n## Published\n<h2>2025</h2>\n\n<div class=\"mb-4 pb-3 border-bottom\">\n  <div class=\"h5 mb-1\">Precipitation regime drives key alterations in subtropical stream fish community assembly and functional trait distribution across a major rainfall gradient</div>\n  <div class=\"text-muted mb-1\">Christopher M. Groff, Sean K. Kinard, J. Derek Hogan, Matt R. Whiles, Amber J. Ulseth, Bradley A. Strickland, Fernando Carvallo, Victoria Jenkins, Alexander T. Solis, Desiree A. Groff, Christopher Frazier, <strong>Connor L. Brown</strong>, Christopher J. Patrick</div>\n  <div class=\"text-muted mb-2\"><em>Journal of Freshwater Ecology • 2025</em></div>\n  <div><a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"https://doi.org/10.1080/02705060.2025.2486262\" target=\"_blank\" rel=\"noopener\">DOI</a></div>\n</div>\n\n<h2>2024</h2>\n\n<div class=\"mb-4 pb-3 border-bottom\">\n  <div class=\"h5 mb-1\">Benthic Macroinvertebrate Assemblage Structure in Salinized Reaches of the Lower Pecos River, Texas</div>\n  <div class=\"text-muted mb-1\"><strong>Connor L. Brown</strong>, Kelbi D. Delaune, Allison A. Pease</div>\n  <div class=\"text-muted mb-2\"><em>The Southwestern Naturalist • 2024</em></div>\n  <div><a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"https://doi.org/10.1894/0038-4909-68.3.212\" target=\"_blank\" rel=\"noopener\">DOI</a></div>\n</div>\n\n\n<div class=\"mb-4 pb-3 border-bottom\">\n  <div class=\"h5 mb-1\">Gulf Killifish (Fundulus grandis) in the Pecos River: Unique Life History Traits in a Nonnative, Inland Population</div>\n  <div class=\"text-muted mb-1\">Kelbi D. Delaune, Allison A. Pease, Reynaldo Patiño, <strong>Connor L. Brown</strong>, Matthew A. Barnes</div>\n  <div class=\"text-muted mb-2\"><em>The Southwestern Naturalist • 2024</em></div>\n  <div><a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"https://doi.org/10.1894/0038-4909-68.1.1\" target=\"_blank\" rel=\"noopener\">DOI</a></div>\n</div>\n\n## In-Prep\n\n<div class=\"mb-4 pb-3 border-bottom\">\n  <div class=\"h5 mb-1\">Ecosystem Metabolism of Coastal Texas Streams Across Precipitation Regimes and Land Use Gradients</div>\n  <div class=\"text-muted mb-1\"><strong>Connor L. Brown</strong>, Christopher F. Fraizer, Christopher J. Patrick, Amber J. Ulseth</div>\n  <div class=\"text-muted mb-2\"><em>Ecosystems • In preparation</em></div>\n  <div></div>\n</div>\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

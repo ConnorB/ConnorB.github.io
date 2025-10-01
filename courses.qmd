@@ -3,8 +3,6 @@ title: "Courses"
 editor: visual
 toc: true
 number-sections: false
-format:
-  html
 ---
 
 # Field Ecology
