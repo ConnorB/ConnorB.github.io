@@ -235,7 +235,7 @@ library(c(readr, dplyr, ggplot2))
 #| echo: true
 
 # Load data file into a new data frame
-konzaData <- read_csv("https://tinyurl.com/FieldEcologyData")
+konzaData <- read_csv("https://connorb.github.io/data/konza_fqi.csv")
 ```
 
 ![](images/loadData.png){fig-align="center" auto-animate="true"}
