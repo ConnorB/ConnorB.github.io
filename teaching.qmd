@@ -7,7 +7,7 @@ number-sections: false
 
 # Lectures
 
-[Field Ecology](courses.html#field-ecology)
+[Field Ecology](courses.qmd#field-ecology)
 
 # Teaching Assistant
 
