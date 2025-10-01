@@ -378,7 +378,7 @@ ggsave("Konza_FQI_Boxplot.png")
 
 -   [The Carpentries](https://carpentries.org/)
 
-    -   Teaches foundational coding and data science skills to researchers worldwide, all lessons are published online
+    -   Teaches foundational coding and data science skills to researchers worldwide, all lessons are published online.
 
     -   [The Carpentries Workshops \@ KU](https://lib.ku.edu/carpentries):
 
@@ -390,4 +390,4 @@ ggsave("Konza_FQI_Boxplot.png")
 
             -   Organize, clean, and query your data using open-source tools. Reproducibly analyze and visualize your data using Python or R.
 
--   Spring 2026 - EVRN 745: Environmental Data Analysis and Statistics W/ Dr. Zimmerman
+-   Spring 2026 - EVRN 420: Environmental Data Science W/ Dr. Zimmerman.
