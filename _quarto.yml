@@ -11,6 +11,8 @@ website:
   # Navbar with social links
   navbar:
     left:
+      - text: About
+        href: index.qmd
       - text: Publications
         href: publications.qmd
       - text: Teaching
