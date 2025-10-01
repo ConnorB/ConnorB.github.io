@@ -190,6 +190,8 @@ After installation, load the packages into your R session by typing these lines 
 
 ```{r}
 #| echo: true
+#| output: asis
+
 library(readr)
 library(dplyr)
 library(ggplot2)
