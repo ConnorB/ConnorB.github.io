@@ -1,0 +1,60 @@
+project:
+  type: website
+execute:
+  freeze: auto
+website:
+  title: "Connor Brown"
+  site-url: https://your-domain.com   # <-- set your final domain (needed for social metadata)
+
+  # Navbar with social links
+  navbar:
+    left:
+      - text: Publications
+        href: publications.qmd
+      - text: Teaching
+        href: teaching.qmd
+    right:
+      - icon: github
+        href: https://github.com/ConnorB
+      - icon: mastodon
+        href: https://mastodon.world/@connorbrown
+      - icon: instagram
+        href: https://instagram.com/conbro_
+      - icon: bluesky   
+        href: https://bsky.app/profile/connorbrown.bsky.social
+      - icon: twitter
+        href: https://twitter.com/eco_conn
+      - text: "{{< fa brands google-scholar >}}"
+        href: https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en
+      - text: "{{< fa brands orcid >}}"
+        href: https://orcid.org/0000-0002-9680-8930
+  # Footer with same social links
+  page-footer:
+    left: |
+      © 2025 Connor Brown
+    right:
+      - icon: github
+        href: https://github.com/ConnorB
+      - icon: mastodon
+        href: https://mastodon.world/@connorbrown
+      - icon: instagram
+        href: https://instagram.com/conbro_
+      - icon: bluesky
+        href: https://bsky.app/profile/connorbrown.bsky.social
+      - icon: twitter
+        href: https://twitter.com/eco_conn
+      - text: "{{< fa brands google-scholar >}}"
+        href: https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en
+      - text: "{{< fa brands orcid >}}"
+        href: https://orcid.org/0000-0002-9680-8930
+
+  # Website tools (metadata, analytics, etc.)
+  twitter-card: true
+  open-graph: true
+  google-analytics: "G-ELB0F4QNPS"
+
+format:
+  html:
+    theme: darkly
+    css: styles.css   # optional, if you want custom CSS
+    toc: true

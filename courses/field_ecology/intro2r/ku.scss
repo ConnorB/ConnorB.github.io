@@ -1,0 +1,235 @@
+/*-- scss:defaults --*/
+// Google Fonts -----------------------------------
+/* Load via _quarto.yml include-in-header:
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Oswald:wght@700;900&display=swap" rel="stylesheet">
+*/
+
+// KU brand colors --------------------------------
+$primary:       #0051ba; // Kansas Blue
+$danger:        #e8000d; // Crimson
+$info:          #73cbf2; // Sky
+$warning:       #f2a900; // Wheat
+$success:       #06a666; // KU green accent
+$secondary:     #85898a; // Signature Gray
+$light:         #dde5ed; // Steam
+$dark:          #003459; // Night
+$fire:          #ff3042; // Fire
+$fog:           #8e9fbc; // Fog
+
+// Fonts (Google + system fallbacks) ---------------
+$font-family-base: "Roboto", Arial, sans-serif;
+$headings-font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+$headings-font-weight: 700;
+
+// Headings color defaults -------------------------
+$headings-color: #333333; // Crimson for headings
+$link-color: $danger;
+$link-hover-color: $danger;
+
+// Navbar / buttons / alerts -----------------------
+$navbar-bg: $primary;
+$navbar-dark-color: #ffffff;
+$btn-border-radius: 0.25rem;
+
+$alert-primary-bg: $primary;
+$alert-primary-color: #ffffff;
+$alert-danger-bg: $danger;
+$alert-danger-color: #ffffff;
+$alert-warning-bg: $warning;
+$alert-warning-color: #333333;
+$alert-info-bg: $info;
+$alert-info-color: #003459;
+
+
+/*-- scss:rules --*/
+// Background for body & slides
+body {
+  background-color: #F2F5F8;
+}
+
+.reveal {
+  background-color: #F2F5F8;
+}
+
+/* Reveal.js slide progress bar */
+.reveal .progress span {
+  background-color: $danger !important; // or #dde5ed if you want Steam
+}
+
+
+/* Title slide text */
+.reveal .title-slide .title {
+  font-size: 2.8rem;
+  font-family: "Oswald", "Arial Black", Arial, sans-serif;
+  color: $primary;
+}
+
+.reveal .title-slide .subtitle {
+  font-size: 2rem;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  color: $fog; // softer KU gray-blue
+}
+
+.reveal .title-slide .author {
+  font-size: 1.4rem;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #333333;
+}
+
+.reveal .title-slide .date {
+  font-size: 1.2rem;
+  font-family: "Roboto", Arial, sans-serif;
+  color: $secondary; // Signature Gray
+}
+
+// Body text ---------------------------------------
+body, p {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
+
+// Headings ----------------------------------------
+.reveal h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  //font-weight: 700;
+  color: $dark;
+}
+
+// Hero display heading
+.display-heading {
+  font-family: "Oswald", "Arial Black", Arial, sans-serif;
+  font-weight: 900;
+  color: $dark;
+}
+
+// Code Configurations -----------------------------
+
+// Inline code
+.reveal code {
+  font-size: 1.1rem;
+  color: $dark;
+}
+
+// Regular R code block
+code.sourceCode.r {
+  font-size: 1rem;
+  background-color: #F7FDFF !important;
+}
+
+// R output
+div.cell-output.cell-output-stderr>pre>code,
+div.cell-output.cell-output-stdout>pre>code {
+  font-size: 0.9rem;
+  background-color: #f8f2f6;
+}
+
+// WebR code block
+div.qwebr-output-code-area pre {
+  background-color: #f8f2f6;
+}
+.reveal .qwebr-output-code-stdout,
+.reveal .qwebr-output-code-stderr {
+  font-size: 0.9rem;
+}
+.lines-content.monaco-editor-background,
+div.overflow-guard div.margin {
+  background-color: #F7FDFF;
+}
+
+/* Default strong (outside callouts) = Crimson */
+p>strong {
+  color: $primary;
+}
+
+/* Strong inside Tip = Kansas Blue */
+.callout-tip .callout-title p>strong {
+  color: #333333 !important;
+}
+
+/* Strong inside Note = Fog */
+.callout-note .callout-title p>strong {
+  color: #333333 !important;
+}
+
+/* Strong inside Warning = Wheat */
+.callout-warning .callout-title p>strong {
+  color: #333333 !important;
+}
+
+
+// Headers (slides) --------------------------------
+.reveal h1 {
+  font-size: 2.5rem;
+}
+.reveal h1 code {
+  font-size: 2.5rem;
+}
+.reveal h2 {
+  font-size: 2.2rem;
+  color: $dark;
+}
+.reveal h2 code {
+  font-size: 1.8rem;
+}
+.reveal h3 {
+  font-size: 1.6rem;
+}
+
+
+// Logo --------------------------------------------
+.reveal .slide-logo {
+  height: 100px !important;
+  width: auto !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+// Tabs --------------------------------------------
+a[role="tab"] {
+  color: $primary;
+}
+a[aria-selected="true"] {
+  color: $danger;
+}
+a:hover {
+  background-color: #003171;
+}
+
+// Monaco editor -----------------------------------
+.monaco-editor {
+  background-color: $fog;
+}
+
+// Horizontal rules --------------------------------
+hr {
+  height: 0.5px;
+  background-color: $danger;
+}
+
+// Answer box --------------------------------------
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+details[open] {
+  padding: 0.5em;
+}
+
+// Scrolling areas ---------------------------------
+.scrolling {
+  max-height: 500px;
+  overflow-y: auto;
+}
+.qwebr-interactive-area {
+  width: 90%;
+}

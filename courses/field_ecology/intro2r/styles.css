@@ -1,0 +1,7 @@
+.reveal .slide-logo {
+  height: 120px !important;  /* adjust size */
+  width: auto !important;
+  position: fixed;
+  bottom: 20px;              /* reposition */
+  right: 20px;
+}

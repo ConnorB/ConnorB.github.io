@@ -1,0 +1,19 @@
+---
+title: "Teaching"
+editor: visual
+toc: true
+number-sections: false
+format:
+  html
+---
+
+# Lectures
+
+[Field Ecology](courses.html#field-ecology)
+
+# Teaching Assistant
+
+-   EVRN 615 Capstone, Environmental Studies Program, University of Kansas
+-   EVRN 460 Field Ecology, Environmental Studies Program, University of Kansas
+-   BIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University
+-   BIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University

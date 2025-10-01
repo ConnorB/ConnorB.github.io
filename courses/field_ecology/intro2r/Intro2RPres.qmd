@@ -1,0 +1,393 @@
+---
+title: "Intro to R, Using R and RStudio"
+subtitle: "Field Ecology"
+date: 10/06/2025
+date-format: "MMM D, YYYY"
+author: "Connor Brown"
+format:
+  revealjs:
+    theme: ku.scss
+    logo: https://logos-world.net/wp-content/uploads/2023/12/Kansas-Jayhawks-Logo-1912.png
+execute:
+  fig-width: 6
+  fig-height: 4
+embed-resources: true
+self_contained: true
+page-layout: full
+code-line-numbers: false
+code-link: true
+fontsize: 1.6em
+editor: visual
+---
+
+```{r setup}
+#| include: false
+# This chunk always runs first
+set.seed(123)   # fix randomness for reproducibility
+```
+
+## What is R? {auto-animate="true"}
+
+-   R is an open-source software environment for statistical computing and graphics, popular among ecologist and data scientist.
+
+-   There's almost nothing you can't do with R and RStudio![^1]
+
+-   Since R does not have a graphical user interface (GUI) for point-and-click interactions like Excel or SPSS, most people use an Integrated Development Environment (IDE) called RStudio.
+
+    -   RStudio provides a consistent way to organize files, access information quickly, and display data.
+
+[^1]: This presentation was created in RStudio!
+
+## R in your Browser - Posit Cloud
+
+<https://posit.cloud/>
+
+::: r-stack
+![](images/Get_Started.png){fig-align="center"}
+
+![](images/FreeAccount.png){.fragment fig-align="center"}
+:::
+
+## Create A New Project
+
+![](images/NewProject.png)
+
+## Name Your Project
+
+![](images/NameProject.png)
+
+## What Are We Looking At? {.scrollable .nostretch}
+
+![](images/NewView.png)
+
+**Console panel**
+
+:   -   The Console is where the output and conflicts and errors within your code are listed. You can also run individual lines of code in the Console if you want to test code variations or options before incorporating into your script and running the entire chunk.
+
+**Environment panel**
+
+:   -   The Environment displays your current R objects, variable values, custom functions, and previously executed commands in the “History” tab.
+
+**Files, Plots, Help**
+
+:   -   The Files panel displays files, plots, the library of R packages that are installed, and R Help resources.
+
+## Open a File For Code {auto-animate="true"}
+
+Before you start writing code, you need to open an R Script file, this is where you'll be able to save code for later.
+
+![](images/NewFile.png)
+
+## New File {.scrollable .nostretch}
+
+![](images/NewFileView.png)
+
+**Script panel**
+
+:   -   This is where you input and run your code. Your graphics display below the chunk of code inside the panel.
+
+**Console panel**
+
+:   -   The Console is where the output and conflicts and errors within your code are listed. You can also run individual lines of code in the Console if you want to test code variations or options before incorporating into your script and running the entire chunk.
+
+**Environment panel**
+
+:   -   The Environment displays your current R objects, variable values, custom functions, and previously executed commands in the “History” tab.
+
+**Files, Plots, Help**
+
+:   -   The Files panel displays files, plots, the library of R packages that are installed, and R Help resources.
+
+## Functions and Packages {auto-animate="true"}
+
+-   A **function** is a reusable piece of code that performs a task.
+
+-   Functions often take **inputs** (called *arguments* or *parameters*) and return an **output**.
+
+    -   For example:
+
+        ```{r}
+        #| echo: true
+        sqrt(x = 16)
+        ```
+
+    -   Here, `sqrt()` is the function, `16` is the argument, and the output is `4`.
+
+-   You can think of a function like a math function:
+
+    -   In math: $y = f(x)$
+
+    -   In R: `f(x)`
+
+        ```{r}
+        #| echo: true
+        log(x = 100)
+        ```
+
+    -   The function `log()` takes `100` as input and returns its logarithm.
+
+## Functions and Packages {auto-animate="true"}
+
+-   **Packages** are collections of functions, data, and documentation bundled together
+
+-   They extend R so you can do tasks like data wrangling, visualization, or machine learning.
+
+-   R comes with a set of base packages, but thousands of additional packages are available through repositories like [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html "The Comprehensive R Archive Network: official source for R packages") and [GitHub](https://github.com/ "A platform for sharing and collaborating on code and R packages").
+
+-   Examples of popular packages:
+
+    -   [`dplyr`](https://dplyr.tidyverse.org/ "Click for More Info on dplyr") for data wrangling
+
+    -   [`ggplot2`](https://ggplot2.tidyverse.org/ "Click for More Info on ggplot2") for visualization
+
+    -   [`caret`](https://topepo.github.io/caret/ "Click for More Info on caret") for machine learning
+
+## Install Packages {auto-animate="true"}
+
+To install a package, type the following commands in the **Console** at the bottom of RStudio and press **Enter** after each one:
+
+``` r
+install.packages("readr")
+install.packages("dplyr")
+install.packages("ggplot2")
+```
+
+[<small>Or navigate to Tools \> Install Packages ... and type the packages you want to install</small>]{.fragment}
+
+## Install Packages {auto-animate="true"}
+
+To install a package, type the following commands in the **Console** at the bottom of RStudio and press **Enter** after each one:
+
+``` r
+install.packages("readr")
+install.packages("dplyr")
+install.packages("ggplot2")
+```
+
+<small>Or navigate to Tools \> Install Packages ... and type the packages you want to install</small>
+
+This will download and install:
+
+-   [`readr`](https://readr.tidyverse.org/ "Click for More Info on readr") for reading files
+-   [`dplyr`](https://dplyr.tidyverse.org/ "Click for More Info on dplyr") for data manipulation
+-   and [`ggplot2`](https://ggplot2.tidyverse.org/ "Click for More Info on ggplot2") for plotting
+
+::: {.callout-note .fragment}
+## Shortcut
+
+You can also install multiple packages at once using the **function** `c()`:
+
+``` r
+install.packages(c("readr", "dplyr", "ggplot2"))
+```
+
+`c()` stands for **c**ombine or **c**oncatenate.
+:::
+
+## Load Packages {auto-animate="true"}
+
+After installation, load the packages into your R session by typing these lines of code into your R Script:
+
+```{r}
+#| echo: true
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+
+::: {.callout-note .fragment}
+## You can comment out anything you don't want to run with `#`, this is useful for annotating code or leaving notes to yourself.
+
+```{r}
+#| echo: true
+# Load Libraries
+library(readr) # for reading files
+library(dplyr) # for data manipulation
+library(ggplot2) # for plotting
+```
+:::
+
+::: {.callout-warning .fragment}
+## You cannot combine or concatenate libraries when loading
+
+```{r}
+#| echo: true
+#| error: true
+library(c(readr, dplyr, ggplot2))
+```
+:::
+
+## Running your Script {.scrollable .nostretch}
+
+![](images/runCode.png){fig-align="center"}
+
+-   You will write your code in the script but it won’t run automatically
+
+    -   You can position your cursor on any line of code in your script and click the Run button and your code will be sent to the console and run.
+
+    -   If you want to run multiple lines, you can highlight a section of code, click Run, and the entire highlighted section will be sent to the console.
+
+    -   You can type code directly into the console, but the code and output is not saved.
+
+## Loading Data {auto-animate="true"}
+
+```{r}
+#| echo: true
+
+# Load data file into a new data frame
+konzaData <- read_csv("https://tinyurl.com/FieldEcologyData")
+```
+
+![](images/loadData.png){fig-align="center" auto-animate="true"}
+
+## What is a Data Frame? {.scrollable .nostretch}
+
+A **data frame** is one of the most common ways to store data in R. Think of it like a **spreadsheet or a table**:
+
+-   Each **row** is an observation (like one student, one site, or one day).
+
+-   Each **column** is a variable (like name, age, or temperature).
+
+![](images/dataframe.png){fig-align="center"}
+
+Almost every dataset you import into R (CSV, Excel, database) becomes a data frame.
+
+Functions in R (and packages like [`dplyr`](https://dplyr.tidyverse.org/ "Click for More Info on dplyr") and [`ggplot2`](https://ggplot2.tidyverse.org/ "Click for More Info on ggplot2")) are designed to work naturally with data frames
+
+## Check Out the Data {auto-animate="true"}
+
+::: r-stack
+![](images/konza_df.png){fig-align="center"}
+
+![](images/konza_view2.png){.fragment fig-align="center"}
+:::
+
+## Check Out the Data {auto-animate="true"}
+
+Or in the console:
+
+```{r}
+#| echo: true
+
+str(konzaData)
+```
+
+## Manipulating Data {auto-animate="true"}
+
+Lets calculate the mean and standard deviation of FQI in each bison group
+
+```{r}
+#| echo: true
+#| class: fragment
+# Calculate the mean and standard deviation
+konzaSummary <- konzaData %>% 
+  # we want to calculate mean and standard deviation between each group of Bison
+  group_by(Bison) %>% 
+  summarise(FQI_Avg = mean(FQI),
+            FQI_sd = sd(FQI),
+            count = n())
+```
+
+::: {.callout-note .fragment}
+## The tidyverse pipe (%\>%) is a shortcut that makes R code easier to read and write when you want to do multiple steps in a row.
+
+-   `%>%` takes the thing on the **left-hand side** and passes it as the **first argument** to the function on the right-hand side
+
+-   In **RStudio**, the keyboard shortcut for inserting the **tidyverse pipe** (`%>%`) is:
+
+    -   **Windows/Linux**: `Ctrl + Shift + M`
+
+    -   **Mac**: `Cmd + Shift + M`
+:::
+
+## Plotting Data {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| class: fragment
+#| output-location: fragment
+konzaData |>
+  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  geom_boxplot()
+```
+
+::: {.callout-note .fragment}
+## In ggplot2, you build a plot in layers.
+
+-   The + is how you add a new layer or element to your plot.
+:::
+
+### [What if we want to add all the observations as points to the boxplot?]{.fragment}
+
+## Plotting Data {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output-location: fragment
+
+konzaData |>
+  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  geom_boxplot() +
+  geom_jitter()
+```
+
+::: callout-note
+## In ggplot2, you build a plot in layers.
+
+-   The + is how you add a new layer or element to your plot.
+:::
+
+### [That works, but some of the observations are duplicated.]{.fragment} [**Hint: Look at the outliers**]{.fragment}
+
+## Plotting Data {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output-location: fragment
+
+konzaData |>
+  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  geom_boxplot(outliers = FALSE) +
+  geom_jitter()
+```
+
+## Saving Your Plot {auto-animate="true"}
+
+```{r}
+#| echo: true
+
+konzaData |>
+  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  geom_boxplot(outliers = FALSE) +
+  geom_jitter()
+
+
+# Save your plot as a PNG file
+ggsave("Konza_FQI_Boxplot.png")
+```
+
+## Saving Your Plot {auto-animate="true"}
+
+![](images/save_plot.png){fig-align="center"}
+
+## Saving Your R Script {auto-animate="true"}
+
+![](images/SaveCode.png){fig-align="center"}
+
+## Learning More {auto-animate="true"}
+
+-   [The Carpentries](https://carpentries.org/)
+
+    -   Teaches foundational coding and data science skills to researchers worldwide, all lessons are published online
+
+    -   [The Carpentries Workshops \@ KU](https://lib.ku.edu/carpentries):
+
+        -   [Software Carpentry](https://lib.ku.edu/software-carpentry)
+
+            -   Automate tasks using the Unix Shell, track and share your work using version control, and write software in Python or R that is readable, reusable, and reliable.
+
+        -   [Data Carpentry](https://lib.ku.edu/data-carpentry)
+
+            -   Organize, clean, and query your data using open-source tools. Reproducibly analyze and visualize your data using Python or R.
+
+-   Spring 2026 - EVRN 745: Environmental Data Analysis and Statistics W/ Dr. Zimmerman

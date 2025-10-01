@@ -1,0 +1,20 @@
+---
+title: "Connor Brown"
+description: "Aquatic Ecologist and Ph.D. Candidate Studying Non-Perennial Streams"
+page-layout: full
+---
+
+::::: grid
+::: g-col-4
+![](assets/images/bio-photo.jpg){.rounded width="100%" fig-align="center"}
+:::
+
+::: g-col-8
+I am a Ph.D. Candidate at the [Kansas Geological Survey](https://www.kgs.ku.edu/) and Department of Geology at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
+
+I previously completed an M.S. in Biology at Sam Houston State University, where I worked with [Dr. Amber Ulseth](https://nrri.umn.edu/faculty-staff/amber-j-ulseth-phd) on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with [Dr. Allison Pease](https://cafnr.missouri.edu/person/allison-pease/) and [Dr. Kelbi Delaune](https://twitter.com/Aquatic_Kel) on Pecos River macroinvertebrate communities.
+
+My research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science.
+:::
+:::::
+![](assets/images/con-header.jpg){fig-align="center"}
