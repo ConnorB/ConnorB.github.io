@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-r",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-r",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "What is R?",
+    "text": "What is R?\n\nR is an open-source software environment for statistical computing and graphics, popular among ecologist and data scientist.\nThere’s almost nothing you can’t do with R and RStudio!1\n\nSince R does not have a graphical user interface (GUI) for point-and-click interactions like Excel or SPSS, most people use an Integrated Development Environment (IDE) called RStudio.\n\nRStudio provides a consistent way to organize files, access information quickly, and display data.\n\n\nThis presentation was created in RStudio!"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#r-in-your-browser---posit-cloud",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#r-in-your-browser---posit-cloud",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "R in your Browser - Posit Cloud",
+    "text": "R in your Browser - Posit Cloud\nhttps://posit.cloud/"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#create-a-new-project",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#create-a-new-project",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Create A New Project",
+    "text": "Create A New Project"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#name-your-project",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#name-your-project",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Name Your Project",
+    "text": "Name Your Project"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#what-are-we-looking-at",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#what-are-we-looking-at",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "What Are We Looking At?",
+    "text": "What Are We Looking At?\n\n\nConsole panel\n\n\nThe Console is where the output and conflicts and errors within your code are listed. You can also run individual lines of code in the Console if you want to test code variations or options before incorporating into your script and running the entire chunk.\n\n\nEnvironment panel\n\n\nThe Environment displays your current R objects, variable values, custom functions, and previously executed commands in the “History” tab.\n\n\nFiles, Plots, Help\n\n\nThe Files panel displays files, plots, the library of R packages that are installed, and R Help resources."
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#open-a-file-for-code",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#open-a-file-for-code",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Open a File For Code",
+    "text": "Open a File For Code\nBefore you start writing code, you need to open an R Script file, this is where you’ll be able to save code for later."
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#new-file",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#new-file",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "New File",
+    "text": "New File\n\n\nScript panel\n\n\nThis is where you input and run your code. Your graphics display below the chunk of code inside the panel.\n\n\nConsole panel\n\n\nThe Console is where the output and conflicts and errors within your code are listed. You can also run individual lines of code in the Console if you want to test code variations or options before incorporating into your script and running the entire chunk.\n\n\nEnvironment panel\n\n\nThe Environment displays your current R objects, variable values, custom functions, and previously executed commands in the “History” tab.\n\n\nFiles, Plots, Help\n\n\nThe Files panel displays files, plots, the library of R packages that are installed, and R Help resources."
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#functions-and-packages",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#functions-and-packages",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Functions and Packages",
+    "text": "Functions and Packages\n\nA function is a reusable piece of code that performs a task.\n\nFunctions often take inputs (called arguments or parameters) and return an output.\n\n\nFor example:\n\nsqrt(x = 16)\n\n[1] 4\n\n\n\nHere, sqrt() is the function, 16 is the argument, and the output is 4.\n\n\n\nYou can think of a function like a math function:\n\nIn math: \\(y = f(x)\\)\n\nIn R: f(x)\n\nlog(x = 100)\n\n[1] 4.60517\n\n\n\nThe function log() takes 100 as input and returns its logarithm."
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#functions-and-packages-1",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#functions-and-packages-1",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Functions and Packages",
+    "text": "Functions and Packages\n\nPackages are collections of functions, data, and documentation bundled together\nThey extend R so you can do tasks like data wrangling, visualization, or machine learning.\nR comes with a set of base packages, but thousands of additional packages are available through repositories like CRAN and GitHub.\n\nExamples of popular packages:\n\ndplyr for data wrangling\nggplot2 for visualization\ncaret for machine learning"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#install-packages",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#install-packages",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Install Packages",
+    "text": "Install Packages\nTo install a package, type the following commands in the Console at the bottom of RStudio and press Enter after each one:\ninstall.packages(\"readr\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"ggplot2\")\nOr navigate to Tools &gt; Install Packages … and type the packages you want to install"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#install-packages-1",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#install-packages-1",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Install Packages",
+    "text": "Install Packages\nTo install a package, type the following commands in the Console at the bottom of RStudio and press Enter after each one:\ninstall.packages(\"readr\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"ggplot2\")\nOr navigate to Tools &gt; Install Packages … and type the packages you want to install\nThis will download and install:\n\n\nreadr for reading files\n\ndplyr for data manipulation\nand ggplot2 for plotting\n\n\n\n\n\n\n\n\nShortcut\n\n\nYou can also install multiple packages at once using the function c():\ninstall.packages(c(\"readr\", \"dplyr\", \"ggplot2\"))\nc() stands for combine or concatenate."
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#load-packages",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#load-packages",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Load Packages",
+    "text": "Load Packages\nAfter installation, load the packages into your R session by typing these lines of code into your R Script:\n\nlibrary(readr)\nlibrary(dplyr)\nlibrary(ggplot2)\n\n\n\n\n\n\n\n\nYou can comment out anything you don’t want to run with #, this is useful for annotating code or leaving notes to yourself.\n\n\n\n# Load Libraries\nlibrary(readr) # for reading files\nlibrary(dplyr) # for data manipulation\nlibrary(ggplot2) # for plotting\n\n\n\n\n\n\n\n\n\n\n\n\nYou cannot combine or concatenate libraries when loading\n\n\n\nlibrary(c(readr, dplyr, ggplot2))\n\nError in library(c(readr, dplyr, ggplot2)): 'package' must be of length 1"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#running-your-script",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#running-your-script",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Running your Script",
+    "text": "Running your Script\n\n\n\n\n\n\nYou will write your code in the script but it won’t run automatically\n\nYou can position your cursor on any line of code in your script and click the Run button and your code will be sent to the console and run.\nIf you want to run multiple lines, you can highlight a section of code, click Run, and the entire highlighted section will be sent to the console.\nYou can type code directly into the console, but the code and output is not saved."
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#loading-data",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#loading-data",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Loading Data",
+    "text": "Loading Data\n\n# Load data file into a new data frame\nkonzaData &lt;- read_csv(\"https://tinyurl.com/FieldEcologyData\")"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-a-data-frame",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-a-data-frame",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "What is a Data Frame?",
+    "text": "What is a Data Frame?\nA data frame is one of the most common ways to store data in R. Think of it like a spreadsheet or a table:\n\nEach row is an observation (like one student, one site, or one day).\nEach column is a variable (like name, age, or temperature).\n\n\n\n\n\nAlmost every dataset you import into R (CSV, Excel, database) becomes a data frame.\nFunctions in R (and packages like dplyr and ggplot2) are designed to work naturally with data frames"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#check-out-the-data",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#check-out-the-data",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Check Out the Data",
+    "text": "Check Out the Data"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#check-out-the-data-1",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#check-out-the-data-1",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Check Out the Data",
+    "text": "Check Out the Data\nOr in the console:\n\nstr(konzaData)\n\nspc_tbl_ [80 × 7] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ Watershed: chr [1:80] \"004b\" \"004b\" \"004b\" \"004b\" ...\n $ Plot     : chr [1:80] \"a1\" \"a2\" \"a3\" \"a4\" ...\n $ N        : num [1:80] 27 24 23 24 32 26 27 33 26 28 ...\n $ FQI      : num [1:80] 22.9 21.3 20.7 21.9 23.5 ...\n $ D        : num [1:80] 7.98 6.82 5.58 7 8.6 ...\n $ Bison    : chr [1:80] \"No Graze\" \"No Graze\" \"No Graze\" \"No Graze\" ...\n $ BurnCycle: num [1:80] 4 4 4 4 4 4 4 4 4 4 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   Watershed = col_character(),\n  ..   Plot = col_character(),\n  ..   N = col_double(),\n  ..   FQI = col_double(),\n  ..   D = col_double(),\n  ..   Bison = col_character(),\n  ..   BurnCycle = col_double()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt;"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#manipulating-data",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#manipulating-data",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Manipulating Data",
+    "text": "Manipulating Data\nLets calculate the mean and standard deviation of FQI in each bison group\n\n# Calculate the mean and standard deviation\nkonzaSummary &lt;- konzaData %&gt;% \n  # we want to calculate mean and standard deviation between each group of Bison\n  group_by(Bison) %&gt;% \n  summarise(FQI_Avg = mean(FQI),\n            FQI_sd = sd(FQI),\n            count = n())\n\n\n\n\n\n\n\n\nThe tidyverse pipe (%&gt;%) is a shortcut that makes R code easier to read and write when you want to do multiple steps in a row.\n\n\n\n%&gt;% takes the thing on the left-hand side and passes it as the first argument to the function on the right-hand side\n\nIn RStudio, the keyboard shortcut for inserting the tidyverse pipe (%&gt;%) is:\n\nWindows/Linux: Ctrl + Shift + M\nMac: Cmd + Shift + M"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Plotting Data",
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn ggplot2, you build a plot in layers.\n\n\n\nThe + is how you add a new layer or element to your plot.\n\n\n\n\n\nWhat if we want to add all the observations as points to the boxplot?"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-1",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-1",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Plotting Data",
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot() +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn ggplot2, you build a plot in layers.\n\n\n\nThe + is how you add a new layer or element to your plot.\n\n\n\n\n\nThat works, but some of the observations are duplicated. Hint: Look at the outliers"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-2",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-2",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Plotting Data",
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot(outliers = FALSE) +\n  geom_jitter()"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Saving Your Plot",
+    "text": "Saving Your Plot\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot(outliers = FALSE) +\n  geom_jitter()\n\n# Save your plot as a PNG file\nggsave(\"Konza_FQI_Boxplot.png\")"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot-1",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot-1",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Saving Your Plot",
+    "text": "Saving Your Plot"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-r-script",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-r-script",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Saving Your R Script",
+    "text": "Saving Your R Script"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#learning-more",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#learning-more",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Learning More",
+    "text": "Learning More\n\n\nThe Carpentries\n\nTeaches foundational coding and data science skills to researchers worldwide, all lessons are published online\n\nThe Carpentries Workshops @ KU:\n\n\nSoftware Carpentry\n\nAutomate tasks using the Unix Shell, track and share your work using version control, and write software in Python or R that is readable, reusable, and reliable.\n\n\n\nData Carpentry\n\nOrganize, clean, and query your data using open-source tools. Reproducibly analyze and visualize your data using Python or R.\n\n\n\n\n\n\nSpring 2026 - EVRN 745: Environmental Data Analysis and Statistics W/ Dr. Zimmerman"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Published\n\n2025\n\n\n\nPrecipitation regime drives key alterations in subtropical stream fish community assembly and functional trait distribution across a major rainfall gradient\n\n\nChristopher M. Groff, Sean K. Kinard, J. Derek Hogan, Matt R. Whiles, Amber J. Ulseth, Bradley A. Strickland, Fernando Carvallo, Victoria Jenkins, Alexander T. Solis, Desiree A. Groff, Christopher Frazier, Connor L. Brown, Christopher J. Patrick\n\n\nJournal of Freshwater Ecology • 2025\n\n\nDOI\n\n\n\n2024\n\n\n\nBenthic Macroinvertebrate Assemblage Structure in Salinized Reaches of the Lower Pecos River, Texas\n\n\nConnor L. Brown, Kelbi D. Delaune, Allison A. Pease\n\n\nThe Southwestern Naturalist • 2024\n\n\nDOI\n\n\n\n\nGulf Killifish (Fundulus grandis) in the Pecos River: Unique Life History Traits in a Nonnative, Inland Population\n\n\nKelbi D. Delaune, Allison A. Pease, Reynaldo Patiño, Connor L. Brown, Matthew A. Barnes\n\n\nThe Southwestern Naturalist • 2024\n\n\nDOI\n\n\nIn-Prep\n\n\nEcosystem Metabolism of Coastal Texas Streams Across Precipitation Regimes and Land Use Gradients\n\n\nConnor L. Brown, Christopher F. Fraizer, Christopher J. Patrick, Amber J. Ulseth\n\n\nEcosystems • In preparation"
+  },
+  {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "Field Ecology\n\nIntro to R"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lectures\nField Ecology\n\n\nTeaching Assistant\n\nEVRN 615 Capstone, Environmental Studies Program, University of Kansas\nEVRN 460 Field Ecology, Environmental Studies Program, University of Kansas\nBIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University\nBIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Connor Brown",
+    "section": "",
+    "text": "I am a Ph.D. Candidate at the Kansas Geological Survey and Department of Geology at the University of Kansas in Dr. Erin Seybold’s lab, where I study ecosystem ecology and biogeochemical cycling as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.\nI previously completed an M.S. in Biology at Sam Houston State University, where I worked with Dr. Amber Ulseth on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with Dr. Allison Pease and Dr. Kelbi Delaune on Pecos River macroinvertebrate communities.\nMy research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
