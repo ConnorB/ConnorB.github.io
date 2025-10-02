@@ -309,7 +309,9 @@ konzaSummary <- konzaData %>%
 #| class: fragment
 #| output-location: fragment
 konzaData |>
-  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  # Set your x and y axis
+  ggplot(aes(x = Bison, y = FQI)) +
+  # What kind of plot do you want to make?
   geom_boxplot()
 ```
 
@@ -318,8 +320,7 @@ konzaData |>
 
 -   The + is how you add a new layer or element to your plot.
 :::
-
-### [What if we want to add all the observations as points to the boxplot?]{.fragment}
+[What makes a "good" plot?]{.fragment}
 
 ## Plotting Data {auto-animate="true"}
 
@@ -328,18 +329,36 @@ konzaData |>
 #| output-location: fragment
 
 konzaData |>
-  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  # Set your x and y axis
+  ggplot(aes(x = Bison, y = FQI)) +
+  # What kind of plot do you want to make?
   geom_boxplot() +
+  # How do we want to label our plot
+  labs(title = "Effect of Bison Grazing on FQI",
+       x = "Grazing Treatment",
+       y = "Floristic Quality Index (FQI)")
+```
+[What if we want to add all the observations as points to the boxplot?]{.fragment}
+
+## Plotting Data {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output-location: fragment
+
+konzaData |>
+  # Set your x and y axis
+  ggplot(aes(x = Bison, y = FQI)) +
+  # What kind of plot do you want to make?
+  geom_boxplot() +
+  # How do we want to label our plot
+  labs(title = "Effect of Bison Grazing on FQI",
+       x = "Grazing Treatment",
+       y = "Floristic Quality Index (FQI)") +
   geom_jitter()
 ```
 
-::: callout-note
-## In ggplot2, you build a plot in layers.
-
--   The + is how you add a new layer or element to your plot.
-:::
-
-### [That works, but some of the observations are duplicated.]{.fragment} [**Hint: Look at the outliers**]{.fragment}
+[That works, but some of the observations are duplicated.]{.fragment} [**Hint: Look at the outliers**]{.fragment}
 
 ## Plotting Data {auto-animate="true"}
 
@@ -348,8 +367,14 @@ konzaData |>
 #| output-location: fragment
 
 konzaData |>
-  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  # Set your x and y axis
+  ggplot(aes(x = Bison, y = FQI)) +
+  # What kind of plot do you want to make?
   geom_boxplot(outliers = FALSE) +
+  # How do we want to label our plot
+  labs(title = "Effect of Bison Grazing on FQI",
+       x = "Grazing Treatment",
+       y = "Floristic Quality Index (FQI)") +
   geom_jitter()
 ```
 
@@ -359,8 +384,14 @@ konzaData |>
 #| echo: true
 
 konzaData |>
-  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +
+  # Set your x and y axis
+  ggplot(aes(x = Bison, y = FQI)) +
+  # What kind of plot do you want to make?
   geom_boxplot(outliers = FALSE) +
+  # How do we want to label our plot
+  labs(title = "Effect of Bison Grazing on FQI",
+       x = "Grazing Treatment",
+       y = "Floristic Quality Index (FQI)") +
   geom_jitter()
 
 
