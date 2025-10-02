@@ -1,6 +1,6 @@
 ---
 title: "Connor Brown"
-description: "Aquatic Ecologist and Ph.D. Candidate Studying Non-Perennial Streams"
+description: "Aquatic Ecologist | PhD Candidate | <span class='pride-flag'></span> | He/Him"
 page-layout: full
 css: styles.css
 ---
@@ -14,14 +14,14 @@ css: styles.css
 [{{< fa brands mastodon >}}](https://mastodon.world/@connorbrown){target="_blank"} &nbsp;
 [{{< fa brands instagram >}}](https://instagram.com/conbro_){target="_blank"} &nbsp;
 [{{< fa brands bluesky >}}](https://bsky.app/profile/connorbrown.bsky.social){target="_blank"} &nbsp;
-[{{< fa brands twitter >}}](https://twitter.com/eco_conn){target="_blank"} &nbsp;
+[{{< fa brands twitter >}}](https://x.com/eco_conn){target="_blank"} &nbsp;
 [{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en){target="_blank"} &nbsp;
 [{{< fa brands orcid >}}](https://orcid.org/0000-0002-9680-8930){target="_blank"}
 </div>
 :::
 
 ::: g-col-8
-I am a Ph.D. Candidate at the [Kansas Geological Survey](https://www.kgs.ku.edu/) and Department of Geology at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
+I am a PhD Candidate at the [Kansas Geological Survey](https://www.kgs.ku.edu/) and Department of Geology at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
 
 I previously completed an M.S. in Biology at Sam Houston State University, where I worked with [Dr. Amber Ulseth](https://nrri.umn.edu/faculty-staff/amber-j-ulseth-phd) on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with [Dr. Allison Pease](https://cafnr.missouri.edu/person/allison-pease/) and [Dr. Kelbi Delaune](https://twitter.com/Aquatic_Kel) on Pecos River macroinvertebrate communities.
 
