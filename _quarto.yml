@@ -7,7 +7,10 @@ execute:
   freeze: auto
 website:
   site-url: https://ConnorB.github.io
-
+  favicon: assets/images/favicon.ico
+  twitter-card: true
+  open-graph: true
+  google-analytics: "G-ELB0F4QNPS"
   # Navbar with social links
   navbar:
     left:
@@ -36,12 +39,6 @@ website:
         href: https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en
       - text: "{{< fa brands orcid >}}"
         href: https://orcid.org/0000-0002-9680-8930
-
-  # Website tools (metadata, analytics, etc.)
-  twitter-card: true
-  open-graph: true
-  google-analytics: "G-ELB0F4QNPS"
-
 format:
   html:
     theme: darkly
