@@ -74,7 +74,7 @@
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#install-packages-1",
     "title": "Intro to R, Using R and RStudio",
     "section": "Install Packages",
-    "text": "Install Packages\nTo install a package, type the following commands in the Console at the bottom of RStudio and press Enter after each one:\ninstall.packages(\"readr\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"ggplot2\")\nOr navigate to Tools &gt; Install Packages … and type the packages you want to install\nThis will download and install:\n\n\nreadr for reading files\n\ndplyr for data manipulation\nand ggplot2 for plotting\n\n\n\n\n\n\n\n\nShortcut\n\n\nYou can also install multiple packages at once using the function c():\ninstall.packages(c(\"readr\", \"dplyr\", \"ggplot2\"))\nc() stands for combine or concatenate."
+    "text": "Install Packages\nTo install a package, type the following commands in the Console at the bottom of RStudio and press Enter after each one:\ninstall.packages(\"readr\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"ggplot2\")\nOr navigate to Tools &gt; Install Packages … and type the packages you want to install\nThis will download and install:\n\n\nreadr for reading files\n\ndplyr for data manipulation\nand ggplot2 for plotting\n\n\n\n\n\n\n\n\n\n\n\nShortcut\n\n\nYou can also install multiple packages at once using the function c():\ninstall.packages(c(\"readr\", \"dplyr\", \"ggplot2\"))\nc() stands for combine or concatenate."
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#load-packages",
