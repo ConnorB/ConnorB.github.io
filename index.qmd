@@ -7,7 +7,11 @@ css: styles.css
 
 ::::: grid
 ::: g-col-4
-![](assets/images/bio-photo.jpg){.rounded width="100%" fig-align="center"}
+<img id="rotating-img" 
+     src="assets/images/shn_deco.jpg" 
+     class="rounded" 
+     style="width:100%; height:250px; object-fit:cover; display:block; margin:auto;" />
+
 
 <div class="social-icons">
 [{{< fa brands github >}}](https://github.com/ConnorB){target="_blank"} &nbsp;
@@ -29,3 +33,14 @@ My research focuses on carbon cycling in non-perennial streams. I am broadly int
 :::
 :::::
 ![](assets/images/con-header.jpg){fig-align="center"}
+
+<script>
+  const images = ["assets/images/shn_deco.jpg", "assets/images/con_shn.png", "assets/images/gbj.png"];
+  let index = 0;
+  const imgElement = document.getElementById("rotating-img");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+  }, 10000); // change every 4 seconds
+</script>

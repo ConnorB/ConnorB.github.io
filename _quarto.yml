@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - data
+    - assets
 
 execute:
   freeze: auto
