@@ -313,7 +313,7 @@ konzaSummary <- konzaData %>%
 #| echo: true
 #| class: fragment
 #| output-location: fragment
-konzaData |>
+konzaData %>%
   # Set your x and y axis
   ggplot(aes(x = Bison, y = FQI)) +
   # What kind of plot do you want to make?
@@ -333,7 +333,7 @@ konzaData |>
 #| echo: true
 #| output-location: fragment
 
-konzaData |>
+konzaData %>%
   # Set your x and y axis
   ggplot(aes(x = Bison, y = FQI)) +
   # What kind of plot do you want to make?
@@ -351,7 +351,7 @@ konzaData |>
 #| echo: true
 #| output-location: fragment
 
-konzaData |>
+konzaData %>%
   # Set your x and y axis
   ggplot(aes(x = Bison, y = FQI)) +
   # What kind of plot do you want to make?
@@ -371,7 +371,7 @@ konzaData |>
 #| echo: true
 #| output-location: fragment
 
-konzaData |>
+konzaData %>%
   # Set your x and y axis
   ggplot(aes(x = Bison, y = FQI)) +
   # What kind of plot do you want to make?
@@ -388,7 +388,7 @@ konzaData |>
 ```{r}
 #| echo: true
 
-konzaData |>
+konzaData %>%
   # Set your x and y axis
   ggplot(aes(x = Bison, y = FQI)) +
   # What kind of plot do you want to make?
