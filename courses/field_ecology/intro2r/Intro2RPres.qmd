@@ -172,6 +172,11 @@ This will download and install:
 -   [`dplyr`](https://dplyr.tidyverse.org/ "Click for More Info on dplyr") for data manipulation
 -   and [`ggplot2`](https://ggplot2.tidyverse.org/ "Click for More Info on ggplot2") for plotting
 
+<div style="position: absolute; bottom: 9em; right: 10em;">
+  <img src="https://www.tidyverse.org/css/images/hex/readr.png" width="100">
+  <img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width="100">
+  <img src="https://www.tidyverse.org/css/images/hex/ggplot2.png" width="100">
+</div>
 ::: {.callout-note .fragment}
 ## Shortcut
 
