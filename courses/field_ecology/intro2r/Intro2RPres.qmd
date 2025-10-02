@@ -281,7 +281,7 @@ str(konzaData)
 
 ## Manipulating Data {auto-animate="true"}
 
-Lets calculate the mean and standard deviation of FQI in each bison group
+Let's calculate the mean and standard deviation of FQI in each bison group
 
 ```{r}
 #| echo: true
@@ -360,7 +360,8 @@ konzaData %>%
   labs(title = "Effect of Bison Grazing on FQI",
        x = "Grazing Treatment",
        y = "Floristic Quality Index (FQI)") +
-  geom_jitter()
+  # Let's make the points brown
+  geom_jitter(color = "brown")
 ```
 
 [That works, but some of the observations are duplicated.]{.fragment} [**Hint: Look at the outliers**]{.fragment}
@@ -380,7 +381,8 @@ konzaData %>%
   labs(title = "Effect of Bison Grazing on FQI",
        x = "Grazing Treatment",
        y = "Floristic Quality Index (FQI)") +
-  geom_jitter()
+  # Let's make the points brown
+  geom_jitter(color = "brown")
 ```
 
 ## Saving Your Plot {auto-animate="true"}
@@ -397,8 +399,8 @@ konzaData %>%
   labs(title = "Effect of Bison Grazing on FQI",
        x = "Grazing Treatment",
        y = "Floristic Quality Index (FQI)") +
-  geom_jitter()
-
+  # Let's make the points brown
+  geom_jitter(color = "brown")
 
 # Save your plot as a PNG file
 ggsave("Konza_FQI_Boxplot.png")
