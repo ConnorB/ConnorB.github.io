@@ -123,7 +123,7 @@
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#manipulating-data",
     "title": "Intro to R, Using R and RStudio",
     "section": "Manipulating Data",
-    "text": "Manipulating Data\nLets calculate the mean and standard deviation of FQI in each bison group\n\n# Calculate the mean and standard deviation\nkonzaSummary &lt;- konzaData %&gt;% \n  # we want to calculate mean and standard deviation between each group of Bison\n  group_by(Bison) %&gt;% \n  summarise(FQI_Avg = mean(FQI),\n            FQI_sd = sd(FQI),\n            count = n())\n\n\n\n\n\n\n\n\nThe tidyverse pipe (%&gt;%) is a shortcut that makes R code easier to read and write when you want to do multiple steps in a row.\n\n\n\n%&gt;% takes the thing on the left-hand side and passes it as the first argument to the function on the right-hand side\n\nIn RStudio, the keyboard shortcut for inserting the tidyverse pipe (%&gt;%) is:\n\nWindows/Linux: Ctrl + Shift + M\nMac: Cmd + Shift + M"
+    "text": "Manipulating Data\nLet’s calculate the mean and standard deviation of FQI in each bison group\n\n# Calculate the mean and standard deviation\nkonzaSummary &lt;- konzaData %&gt;% \n  # we want to calculate mean and standard deviation between each group of Bison\n  group_by(Bison) %&gt;% \n  summarise(FQI_Avg = mean(FQI),\n            FQI_sd = sd(FQI),\n            count = n())\n\n\n\n\n\n\n\n\nThe tidyverse pipe (%&gt;%) is a shortcut that makes R code easier to read and write when you want to do multiple steps in a row.\n\n\n\n%&gt;% takes the thing on the left-hand side and passes it as the first argument to the function on the right-hand side\n\nIn RStudio, the keyboard shortcut for inserting the tidyverse pipe (%&gt;%) is:\n\nWindows/Linux: Ctrl + Shift + M\nMac: Cmd + Shift + M"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data",
@@ -144,21 +144,21 @@
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-2",
     "title": "Intro to R, Using R and RStudio",
     "section": "Plotting Data",
-    "text": "Plotting Data\n\nkonzaData %&gt;%\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot() +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\nThat works, but some of the observations are duplicated. Hint: Look at the outliers"
+    "text": "Plotting Data\n\nkonzaData %&gt;%\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot() +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  # Let's make the points brown\n  geom_jitter(color = \"brown\")\n\n\n\n\n\n\n\n\n\nThat works, but some of the observations are duplicated. Hint: Look at the outliers"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-3",
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-3",
     "title": "Intro to R, Using R and RStudio",
     "section": "Plotting Data",
-    "text": "Plotting Data\n\nkonzaData %&gt;%\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot(outliers = FALSE) +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  geom_jitter()"
+    "text": "Plotting Data\n\nkonzaData %&gt;%\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot(outliers = FALSE) +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  # Let's make the points brown\n  geom_jitter(color = \"brown\")"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot",
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot",
     "title": "Intro to R, Using R and RStudio",
     "section": "Saving Your Plot",
-    "text": "Saving Your Plot\n\nkonzaData %&gt;%\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot(outliers = FALSE) +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  geom_jitter()\n\n# Save your plot as a PNG file\nggsave(\"Konza_FQI_Boxplot.png\")"
+    "text": "Saving Your Plot\n\nkonzaData %&gt;%\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot(outliers = FALSE) +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  # Let's make the points brown\n  geom_jitter(color = \"brown\")\n\n# Save your plot as a PNG file\nggsave(\"Konza_FQI_Boxplot.png\")"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot-1",
