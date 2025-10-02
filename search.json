@@ -130,28 +130,35 @@
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data",
     "title": "Intro to R, Using R and RStudio",
     "section": "Plotting Data",
-    "text": "Plotting Data\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn ggplot2, you build a plot in layers.\n\n\n\nThe + is how you add a new layer or element to your plot.\n\n\n\n\n\nWhat if we want to add all the observations as points to the boxplot?"
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn ggplot2, you build a plot in layers.\n\n\n\nThe + is how you add a new layer or element to your plot.\n\n\n\n\n\nWhat makes a “good” plot?"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-1",
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-1",
     "title": "Intro to R, Using R and RStudio",
     "section": "Plotting Data",
-    "text": "Plotting Data\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot() +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn ggplot2, you build a plot in layers.\n\n\n\nThe + is how you add a new layer or element to your plot.\n\n\n\n\n\nThat works, but some of the observations are duplicated. Hint: Look at the outliers"
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot() +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\")\n\n\n\n\n\n\n\n\n\nWhat if we want to add all the observations as points to the boxplot?"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-2",
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-2",
     "title": "Intro to R, Using R and RStudio",
     "section": "Plotting Data",
-    "text": "Plotting Data\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot(outliers = FALSE) +\n  geom_jitter()"
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot() +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\nThat works, but some of the observations are duplicated. Hint: Look at the outliers"
+  },
+  {
+    "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-3",
+    "href": "courses/field_ecology/intro2r/Intro2RPres.html#plotting-data-3",
+    "title": "Intro to R, Using R and RStudio",
+    "section": "Plotting Data",
+    "text": "Plotting Data\n\nkonzaData |&gt;\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot(outliers = FALSE) +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  geom_jitter()"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot",
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot",
     "title": "Intro to R, Using R and RStudio",
     "section": "Saving Your Plot",
-    "text": "Saving Your Plot\n\nkonzaData |&gt;\n  ggplot(aes(x = Bison, y = FQI, fill = Bison)) +\n  geom_boxplot(outliers = FALSE) +\n  geom_jitter()\n\n# Save your plot as a PNG file\nggsave(\"Konza_FQI_Boxplot.png\")"
+    "text": "Saving Your Plot\n\nkonzaData |&gt;\n  # Set your x and y axis\n  ggplot(aes(x = Bison, y = FQI)) +\n  # What kind of plot do you want to make?\n  geom_boxplot(outliers = FALSE) +\n  # How do we want to label our plot\n  labs(title = \"Effect of Bison Grazing on FQI\",\n       x = \"Grazing Treatment\",\n       y = \"Floristic Quality Index (FQI)\") +\n  geom_jitter()\n\n# Save your plot as a PNG file\nggsave(\"Konza_FQI_Boxplot.png\")"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#saving-your-plot-1",
