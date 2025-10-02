@@ -1,0 +1,4 @@
+# robots.txt for ConnorB.github.io
+
+User-agent: *
+Disallow: /data/
