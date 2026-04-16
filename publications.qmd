@@ -46,7 +46,12 @@ normalize_entry <- function(key, e) {
   yr <- if (!is.null(e$year)) as.integer(e$year)
         else if (!is.null(e$date)) to_year(e$date)
         else NA_integer_
-
+  to_date <- function(d) {
+    suppressWarnings(as.Date(d))
+    }
+  date_val <- if (!is.null(e$date)) to_date(e$date)
+  else if (!is.null(e$year)) as.Date(paste0(e$year, "-01-01"))
+  else as.Date(NA)
   # detect "published" from fields OR links (DOI/Published)
   has_pub_field <- !is.null(e$published_url) || !is.null(e$doi)
   has_pub_link <- FALSE
@@ -68,6 +73,7 @@ normalize_entry <- function(key, e) {
     authors_html = authors_html,
     venue = e$venue,
     year = yr,
+    .date = date_val,
     status = e$status,
     doi = e$doi,
     published_url = e$published_url,
@@ -96,12 +102,12 @@ working   <- Filter(function(x) !isTRUE(x$.is_published), items)
 
 sort_entries <- function(xs) {
   if (!length(xs)) return(xs)
-  # extract vectors
-  year_vec  <- vapply(xs, function(z) z$year %||% NA_integer_, integer(1))
-  title_vec <- vapply(xs, function(z) z$title %||% "", character(1))
-  # sort newest first by using negative years; push missing years to the end
-  year_safe <- ifelse(is.na(year_vec), -Inf, year_vec)
-  ord <- order(-year_safe, tolower(title_vec), na.last = TRUE)
+  date_vec <- vapply(xs, function(z) {
+    d <- z$.date
+    if (is.null(d) || is.na(d)) as.Date(NA) else d
+  }, as.Date(NA))
+  date_safe <- ifelse(is.na(date_vec), as.Date(-Inf, origin = "1970-01-01"), date_vec)
+  ord <- order(-as.numeric(date_safe), na.last = TRUE)
   xs[ord]
 }
 
