@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Published\n\n2025\n\n\n\nPrecipitation regime drives key alterations in subtropical stream fish community assembly and functional trait distribution across a major rainfall gradient\n\n\nChristopher M. Groff, Sean K. Kinard, J. Derek Hogan, Matt R. Whiles, Amber J. Ulseth, Bradley A. Strickland, Fernando Carvallo, Victoria Jenkins, Alexander T. Solis, Desiree A. Groff, Christopher Frazier, Connor L. Brown, Christopher J. Patrick\n\n\nJournal of Freshwater Ecology • 2025\n\n\nDOI\n\n\n\n2024\n\n\n\nBenthic Macroinvertebrate Assemblage Structure in Salinized Reaches of the Lower Pecos River, Texas\n\n\nConnor L. Brown, Kelbi D. Delaune, Allison A. Pease\n\n\nThe Southwestern Naturalist • 2024\n\n\nDOI\n\n\n\n\nGulf Killifish (Fundulus grandis) in the Pecos River: Unique Life History Traits in a Nonnative, Inland Population\n\n\nKelbi D. Delaune, Allison A. Pease, Reynaldo Patiño, Connor L. Brown, Matthew A. Barnes\n\n\nThe Southwestern Naturalist • 2024\n\n\nDOI\n\n\nIn-Prep\n\n\nEcosystem Metabolism of Coastal Texas Streams Across Precipitation Regimes and Land Use Gradients\n\n\nConnor L. Brown, Christopher F. Fraizer, Christopher J. Patrick, Amber J. Ulseth\n\n\nEcosystems • In preparation\n\n\n\n\n\n\n\nNetwork Connectivity and Local Hydrology Drive DOM Composition in a Non-Perennial Stream\n\n\nSarah M. Flynn, Rebecca Hale, Erin Seybold, Stephen Plont, Michelle Busch, Alexi Sommerville, Connor L. Brown, Amy. J. Burgin\n\n\nJGR: Biogeosciences • In preparation\n\n\n\n\n\n\n\nSpatiotemporal variation of ecosystem metabolism in a eutrophic, polymictic reservoir: Water column stability begets metabolism stability\n\n\nChristopher F. Frazier, Connor L. Brown, Megan Hamersky, Thomas Coole, Marissa Campobasso, Catherine Thomas, Ted D. Harris\n\n\nInland Waters • In preparation"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Connor Brown",
+    "section": "",
+    "text": "I am a PhD Candidate at the Kansas Geological Survey and Department of Geology at the University of Kansas in Dr. Erin Seybold’s lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.\nI previously completed an M.S. in Biology at Sam Houston State University, where I worked with Dr. Amber Ulseth on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with Dr. Allison Pease and Dr. Kelbi Delaune on Pecos River macroinvertebrate communities.\nMy research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lectures\nField Ecology\n\n\nTeaching Assistant\n\nEVRN 615 Capstone, Environmental Studies Program, University of Kansas\nEVRN 460 Field Ecology, Environmental Studies Program, University of Kansas\nBIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University\nBIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University"
+  },
+  {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-r",
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-r",
     "title": "Intro to R, Using R and RStudio",
@@ -182,11 +203,11 @@
     "text": "Learning More\n\n\nThe Carpentries\n\nTeaches foundational coding and data science skills to researchers worldwide, all lessons are published online.\n\nThe Carpentries Workshops @ KU:\n\n\nSoftware Carpentry\n\nAutomate tasks using the Unix Shell, track and share your work using version control, and write software in Python or R that is readable, reusable, and reliable.\n\n\n\nData Carpentry\n\nOrganize, clean, and query your data using open-source tools. Reproducibly analyze and visualize your data using Python or R.\n\n\n\n\n\n\nSpring 2026 - EVRN 420: Environmental Data Science W/ Dr. Zimmerman."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Published\n\n2025\n\n\n\nPrecipitation regime drives key alterations in subtropical stream fish community assembly and functional trait distribution across a major rainfall gradient\n\n\nChristopher M. Groff, Sean K. Kinard, J. Derek Hogan, Matt R. Whiles, Amber J. Ulseth, Bradley A. Strickland, Fernando Carvallo, Victoria Jenkins, Alexander T. Solis, Desiree A. Groff, Christopher Frazier, Connor L. Brown, Christopher J. Patrick\n\n\nJournal of Freshwater Ecology • 2025\n\n\nDOI\n\n\n\n2024\n\n\n\nBenthic Macroinvertebrate Assemblage Structure in Salinized Reaches of the Lower Pecos River, Texas\n\n\nConnor L. Brown, Kelbi D. Delaune, Allison A. Pease\n\n\nThe Southwestern Naturalist • 2024\n\n\nDOI\n\n\n\n\nGulf Killifish (Fundulus grandis) in the Pecos River: Unique Life History Traits in a Nonnative, Inland Population\n\n\nKelbi D. Delaune, Allison A. Pease, Reynaldo Patiño, Connor L. Brown, Matthew A. Barnes\n\n\nThe Southwestern Naturalist • 2024\n\n\nDOI\n\n\nIn-Prep\n\n\nEcosystem Metabolism of Coastal Texas Streams Across Precipitation Regimes and Land Use Gradients\n\n\nConnor L. Brown, Christopher F. Fraizer, Christopher J. Patrick, Amber J. Ulseth\n\n\nEcosystems • In preparation\n\n\n\n\n\n\n\nNetwork Connectivity and Local Hydrology Drive DOM Composition in a Non-Perennial Stream\n\n\nSarah M. Flynn, Rebecca Hale, Erin Seybold, Stephen Plont, Michelle Busch, Alexi Sommerville, Connor L. Brown, Amy. J. Burgin\n\n\nJGR: Biogeosciences • In preparation\n\n\n\n\n\n\n\nSpatiotemporal variation of ecosystem metabolism in a eutrophic, polymictic reservoir: Water column stability begets metabolism stability\n\n\nChristopher F. Frazier, Connor L. Brown, Megan Hamersky, Thomas Coole, Marissa Campobasso, Catherine Thomas, Ted D. Harris\n\n\nInland Waters • In preparation"
+    "text": "About this site"
   },
   {
     "objectID": "courses.html",
@@ -194,26 +215,5 @@
     "title": "Courses",
     "section": "",
     "text": "Field Ecology\n\nIntro to R"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Connor Brown",
-    "section": "",
-    "text": "I am a PhD Candidate at the Kansas Geological Survey and Department of Geology at the University of Kansas in Dr. Erin Seybold’s lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.\nI previously completed an M.S. in Biology at Sam Houston State University, where I worked with Dr. Amber Ulseth on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with Dr. Allison Pease and Dr. Kelbi Delaune on Pecos River macroinvertebrate communities.\nMy research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science."
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Lectures\nField Ecology\n\n\nTeaching Assistant\n\nEVRN 615 Capstone, Environmental Studies Program, University of Kansas\nEVRN 460 Field Ecology, Environmental Studies Program, University of Kansas\nBIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University\nBIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
