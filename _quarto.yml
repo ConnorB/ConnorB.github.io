@@ -24,7 +24,7 @@ website:
   # Footer with same social links
   page-footer:
     left: |
-      © 2025 Connor Brown
+      © 2026 Connor Brown
     right:
       - icon: github
         href: https://github.com/ConnorB
