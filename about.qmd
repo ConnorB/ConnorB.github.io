@@ -1,5 +1,46 @@
 ---
-title: "About"
+title: "Connor Brown"
+description: "Aquatic Ecologist | PhD Candidate | <span class='pride-flag'></span> | He/Him"
+page-layout: full
+css: styles.css
 ---
 
-About this site
+::::: grid
+::: g-col-4
+<img id="rotating-img" 
+     src="assets/images/shn_deco.jpg" 
+     class="rounded" 
+     style="width:100%; height:250px; object-fit:cover; display:block; margin:auto;" />
+
+
+<div class="social-icons">
+[{{< fa brands github >}}](https://github.com/ConnorB){target="_blank"} &nbsp;
+[{{< fa brands mastodon >}}](https://mastodon.world/@connorbrown){target="_blank"} &nbsp;
+[{{< fa brands instagram >}}](https://instagram.com/conbro_){target="_blank"} &nbsp;
+[{{< fa brands bluesky >}}](https://bsky.app/profile/connorbrown.bsky.social){target="_blank"} &nbsp;
+[{{< fa brands twitter >}}](https://x.com/eco_conn){target="_blank"} &nbsp;
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en){target="_blank"} &nbsp;
+[{{< fa brands orcid >}}](https://orcid.org/0000-0002-9680-8930){target="_blank"}
+</div>
+:::
+
+::: g-col-8
+I am a PhD Candidate at the [Kansas Geological Survey](https://www.kgs.ku.edu/) and Department of Geology at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
+
+I previously completed an M.S. in Biology at Sam Houston State University, where I worked with [Dr. Amber Ulseth](https://nrri.umn.edu/faculty-staff/amber-j-ulseth-phd) on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with [Dr. Allison Pease](https://cafnr.missouri.edu/person/allison-pease/) and [Dr. Kelbi Delaune](https://twitter.com/Aquatic_Kel) on Pecos River macroinvertebrate communities.
+
+My research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science.
+:::
+:::::
+![](assets/images/con-header.jpg){fig-align="center"}
+
+<script>
+  const images = ["assets/images/shn_deco.jpg", "assets/images/con_shn.png", "assets/images/gbj.png"];
+  let index = 0;
+  const imgElement = document.getElementById("rotating-img");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+  }, 10000); // change every 4 seconds
+</script>

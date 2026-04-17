@@ -86,10 +86,17 @@ normalize_entry <- function(key, e) {
 }
 
 raw <- yaml::read_yaml("publications.yaml")
+raw_ds <- tryCatch(yaml::read_yaml("datasets.yaml"), error = function(e) list())
+if (is.null(raw_ds)) raw_ds <- list()
+
 if (is.null(raw)) raw <- list()
 items <- if (length(raw)) {
   idx <- seq_along(raw)
   lapply(idx, function(i) normalize_entry(as.character(i), raw[[i]]))
+} else list()
+
+ds_items <- if (length(raw_ds)) {
+  lapply(seq_along(raw_ds), function(i) normalize_entry(as.character(i), raw_ds[[i]]))
 } else list()
 
 # Split by published vs working
@@ -110,9 +117,6 @@ sort_entries <- function(xs) {
   xs[ord]
 }
 
-published <- sort_entries(published)
-working   <- sort_entries(working)
-
 # Group by year
 split_by_year <- function(xs) {
   if (!length(xs)) return(list(years = integer(0), groups = list()))
@@ -129,14 +133,15 @@ split_by_year <- function(xs) {
   list(years = years, groups = groups)
 }
 
-pub_grp <- split_by_year(published)
-wrk_grp <- split_by_year(working)
+pub_grp <- split_by_year(sort_entries(published))
+wrk_grp <- split_by_year(sort_entries(working))
+ds_grp <- split_by_year(sort_entries(ds_items))
 
 # HTML helpers
 btn <- function(label, href, style = "secondary") {
   if (is.null(href) || identical(href, "")) return("")
   sprintf(
-    '<a class="btn btn-sm btn-outline-%s me-2" href="%s" target="_blank" rel="noopener">%s</a>',
+    '<a class="btn btn-sm btn-%s me-2" href="%s" target="_blank" rel="noopener">%s</a>',
     style, href, label
   )
 }
@@ -158,11 +163,11 @@ render_entry <- function(e) {
 
   # Specific fields first
   links <- character()
-  if (!is.null(e$doi) && nzchar(e$doi))               links <- c(links, btn("DOI", paste0("https://doi.org/", e$doi)))
-  if (!is.null(e$published_url) && nzchar(e$published_url)) links <- c(links, btn("Published", e$published_url, "primary"))
+  if (!is.null(e$doi) && nzchar(e$doi))               links <- c(links, btn("DOI", paste0("https://doi.org/", e$doi), "success"))
+  if (!is.null(e$published_url) && nzchar(e$published_url)) links <- c(links, btn("Published", e$published_url, "success"))
   if (!is.null(e$preprint) && nzchar(e$preprint))     links <- c(links, btn("Preprint", e$preprint, "dark"))
   if (!is.null(e$pdf) && nzchar(e$pdf))               links <- c(links, btn("PDF", e$pdf))
-  if (!is.null(e$code) && nzchar(e$code))             links <- c(links, btn("Code", e$code, "success"))
+  if (!is.null(e$code) && nzchar(e$code))             links <- c(links, btn("Code", e$code, "info"))
   if (!is.null(e$data) && nzchar(e$data))             links <- c(links, btn("Data", e$data, "info"))
 
   # Then generic links from YAML (styled by common labels)
@@ -171,7 +176,7 @@ render_entry <- function(e) {
       lbl_l <- tolower(lbl)
       if (lbl_l %in% c("published","journal","publisher")) "primary"
       else if (lbl_l %in% c("preprint")) "dark"
-      else if (lbl_l %in% c("code","software","github")) "success"
+      else if (lbl_l %in% c("code","software","github")) "info"
       else if (lbl_l %in% c("data","dataset")) "info"
       else "secondary"
     }
@@ -203,7 +208,7 @@ render_entry <- function(e) {
 
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
-# Compose section HTML (with real H2 headings so they appear in ToC)
+# Compose section HTML
 compose_section <- function(grp, empty_msg) {
   if (!length(grp$years)) return(sprintf("<p>%s</p>", empty_msg))
   out <- character()
@@ -213,7 +218,7 @@ compose_section <- function(grp, empty_msg) {
 
     # Only add a heading if year is not NA
     if (!is.na(y)) {
-      out <- c(out, sprintf('<h3 class="pub-year">%s</h3>', as.character(y)))
+      out <- c(out, sprintf('<h1>%s</h1>', as.character(y)))
     }
 
     for (e in entries) {
@@ -225,15 +230,20 @@ compose_section <- function(grp, empty_msg) {
 
 PUB_HTML <- compose_section(pub_grp, "No published work yet.")
 WRK_HTML <- compose_section(wrk_grp, "No working papers listed.")
+DATASETS_HTML <- compose_section(ds_grp, "No datasets listed.")
 ```
-## Published
+## Papers
 ```{r}
 #| echo: false
 #| results: asis
 cat(PUB_HTML)
-
 ```
-
+## Datasets
+```{r}
+#| echo: false
+#| results: asis
+cat(DATASETS_HTML)
+```
 ## In-Prep
 ```{r}
 #| echo: false

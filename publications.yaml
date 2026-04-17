@@ -22,9 +22,7 @@
     - "Carla L. Atkinson"
   date: 2025-10-23
   venue: "Earth System Science Data Discussions"
-  links:
-    - text: "DOI"
-      href: "https://doi.org/10.5194/essd-2025-559"
+  doi: "10.5194/essd-2025-559"
 
 - title: "Spatiotemporal variation of ecosystem metabolism in a eutrophic, polymictic reservoir: Water column stability begets metabolism stability"
   authors:
@@ -37,9 +35,7 @@
     - "Ted D. Harris"
   date: 2025-12-11
   venue: "Inland Waters"
-  links:
-    - text: "DOI"
-      href: "https://doi.org/10.1080/20442041.2025.2602550"
+  doi: "10.1080/20442041.2025.2602550"
 
 - title: "Network Connectivity and Local Hydrology Drive DOM Composition in a Non-Perennial Stream"
   authors:
@@ -71,9 +67,7 @@
     - "Christopher J. Patrick"
   date: 2025-04-10
   venue: "Journal of Freshwater Ecology"
-  links:
-    - text: "DOI"
-      href: "https://doi.org/10.1080/02705060.2025.2486262"
+  doi: "10.1080/02705060.2025.2486262"
 
 - title: "Ecosystem Metabolism of Coastal Texas Streams Across Precipitation Regimes and Land Use Gradients"
   authors:
@@ -91,9 +85,7 @@
     - "Allison A. Pease"
   date: 2024-12-19
   venue: "The Southwestern Naturalist"
-  links:
-    - text: "DOI"
-      href: "https://doi.org/10.1894/0038-4909-68.3.212"
+  doi: "10.1894/0038-4909-68.3.212"
 
 - title: "Gulf Killifish (Fundulus grandis) in the Pecos River: Unique Life History Traits in a Nonnative, Inland Population"
   authors:
@@ -104,6 +96,4 @@
     - "Matthew A. Barnes"
   date: 2024-03-21
   venue: "The Southwestern Naturalist"
-  links:
-    - text: "DOI"
-      href: "https://doi.org/10.1894/0038-4909-68.1.1"
+  doi: "10.1894/0038-4909-68.1.1"

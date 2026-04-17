@@ -1,0 +1,135 @@
+- title: "AIMS Johnston Draw Continuous Stage and Discharge at Watershed Outlet Data (AIMS_MW_JDR_DISC)"
+  authors:
+    - "me"
+    - "Maggi Kraft"
+    - "Rebecca Hale"
+    - "Sarah Godsey"
+  date: 2026-04-16
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/7aebc54cb05649ceb4b508d5bab07784"
+
+- title: "AIMS Gibson Jack Creek Continuous Stage and Discharge at Watershed Outlet Data (AIMS_MW_GBJ_DISC)"
+  authors:
+    - "me"
+    - "Maggi Kraft"
+    - "Rebecca Hale"
+    - "Sarah Godsey"
+  date: 2026-04-16
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/26e4f8fc7f05466d9f6581dc643c3dcc"
+
+- title: "AIMS Johnston Draw Continuous Water Quality at Watershed Outlet Data (AIMS_MW_JDR_EXOS)"
+  authors:
+    - "me"
+    - "Evan Bilbrey"
+    - "Riley Lanfear"
+    - "Sarah Godsey"
+    - "Rebecca Hale"
+  date: 2026-04-16
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/36fe56f8ae95404cb70addf6cfc9a3b0"
+
+- title: "AIMS Gibson Jack Creek Continuous Water Quality at Watershed Outlet Data (AIMS_MW_GBJ_EXOS)"
+  authors:
+    - "me"
+    - "Riley Lanfear"
+    - "Evan Bilbrey"
+    - "Sarah Godsey"
+    - "Rebecca Hale"
+  date: 2026-04-16
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/069d859c54bb4f2bb10a9672c7889205"
+
+- title: "Shane Creek (Konza Prairie) Experiment Stream Temperature, Intermittency, and Conductivity Data (AIMS_GP_SHN_approach4_STIC)"
+  authors:
+    - "me"
+    - "Claire Utzman"
+    - "Sarah Flynn"
+    - "Michelle Busch"
+  date: 2026-03-16
+  venue: "HydroShare"
+  doi: "10.4211/hs.c10e6eb12d6042709daa3fb93838ec00"
+
+- title: "Youngmeyer Ranch (KS) Continuous Discharge at Watershed Outlet Data (AIMS_GP_YMR_approach1_DISC)"
+  authors:
+    - "me"
+    - "Erin Seybold"
+  date: 2026-04-16
+  venue: "HydroShare"
+  doi: "10.4211/hs.532d080f56114afd8ec2bf538a5253e9"
+
+- title: "Shane Creek (Konza Prairie) Continuous Discharge at Watershed Outlet Data (AIMS_GP_SHN_approach1_DISC)"
+  authors:
+    - "me"
+    - "Erin Seybold"
+  date: 2026-04-16
+  venue: "HydroShare"
+  doi: "10.4211/hs.a5bc472a8f3546fca9267f580f4eb216"
+
+- title: "Kings Creek (Konza Prairie) Continuous Discharge at Watershed Outlet Data (AIMS_GP_KNZ_approach1_DISC)"
+  authors:
+    - "me"
+    - "Erin Seybold"
+  date: 2026-04-16
+  venue: "HydroShare"
+  doi: "10.4211/hs.c5352c83797143778b13064d147b728a"
+
+- title: "AIMS Continuous Water Quality at Shane Creek Outlet (AIMS_SHN_approach1_EXOS)"
+  authors:
+    - "me"
+    - "Sarah Flynn"
+    - "Amy Burgin"
+    - "Erin Seybold"
+  date: 2026-04-16
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/a4ef70ad054b46cea353456a3b43e7e0"
+
+- title: "AIMS Continuous Water Quality at King's Creek Outlet (AIMS_KNZ_approach1_EXOS_V1.0)"
+  authors:
+    - "me"
+    - "Sarah Flynn"
+    - "Amy Burgin"
+    - "Erin Seybold"
+  date: 2025-07-18
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/1df2e8f60faa45e880c44375d3977b2b"
+
+- title: "Shane Creek, field data (AIMS_GP_SHN_YSIS)"
+  authors:
+    - "me"
+    - "Sarah Flynn"
+    - "Claire Utzman"
+    - "Michelle Busch"
+    - "Alexi Sommerville"
+    - "Jessica Wilhelm"
+    - "Taylor Layman"
+    - "Claudia Dorantes"
+    - "Lydia Zeglin"
+    - "Erin Seybold"
+    - "Amy Burgin"
+  date: 2025-06-13
+  venue: "HydroShare"
+  links:
+    - text: "URL"
+      href: "http://www.hydroshare.org/resource/08868f39db5c47468aee7717e019302c"
+
+- title: "Youngmeyer Ranch, KS Environmental Data (AIMS_GP_YMR)"
+  authors:
+    - "me"
+    - "Sam Zipper"
+    - "Michelle Busch"
+  date: 2026-04-14
+  venue: "HydroShare"
+  doi: "10.4211/hs.d499a6e70f6a4ab3af42e922027e1448"
