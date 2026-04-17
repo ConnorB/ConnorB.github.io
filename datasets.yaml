@@ -4,11 +4,9 @@
     - "Maggi Kraft"
     - "Rebecca Hale"
     - "Sarah Godsey"
-  date: 2026-04-16
+  date: 2026-04-17
   venue: "HydroShare"
-  links:
-    - text: "URL"
-      href: "http://www.hydroshare.org/resource/7aebc54cb05649ceb4b508d5bab07784"
+  doi: "10.4211/hs.7aebc54cb05649ceb4b508d5bab07784"
 
 - title: "AIMS Gibson Jack Creek Continuous Stage and Discharge at Watershed Outlet Data (AIMS_MW_GBJ_DISC)"
   authors:
@@ -16,11 +14,9 @@
     - "Maggi Kraft"
     - "Rebecca Hale"
     - "Sarah Godsey"
-  date: 2026-04-16
+  date: 2026-04-17
   venue: "HydroShare"
-  links:
-    - text: "URL"
-      href: "http://www.hydroshare.org/resource/26e4f8fc7f05466d9f6581dc643c3dcc"
+  doi: "10.4211/hs.26e4f8fc7f05466d9f6581dc643c3dcc"
 
 - title: "AIMS Johnston Draw Continuous Water Quality at Watershed Outlet Data (AIMS_MW_JDR_EXOS)"
   authors:
@@ -29,11 +25,9 @@
     - "Riley Lanfear"
     - "Sarah Godsey"
     - "Rebecca Hale"
-  date: 2026-04-16
+  date: 2026-04-17
   venue: "HydroShare"
-  links:
-    - text: "URL"
-      href: "http://www.hydroshare.org/resource/36fe56f8ae95404cb70addf6cfc9a3b0"
+  doi: "10.4211/hs.36fe56f8ae95404cb70addf6cfc9a3b0"
 
 - title: "AIMS Gibson Jack Creek Continuous Water Quality at Watershed Outlet Data (AIMS_MW_GBJ_EXOS)"
   authors:
@@ -42,11 +36,9 @@
     - "Evan Bilbrey"
     - "Sarah Godsey"
     - "Rebecca Hale"
-  date: 2026-04-16
+  date: 2026-04-17
   venue: "HydroShare"
-  links:
-    - text: "URL"
-      href: "http://www.hydroshare.org/resource/069d859c54bb4f2bb10a9672c7889205"
+  doi: "10.4211/hs.069d859c54bb4f2bb10a9672c7889205"
 
 - title: "Shane Creek (Konza Prairie) Experiment Stream Temperature, Intermittency, and Conductivity Data (AIMS_GP_SHN_approach4_STIC)"
   authors:
