@@ -172,11 +172,10 @@ This will download and install:
 -   [`dplyr`](https://dplyr.tidyverse.org/ "Click for More Info on dplyr") for data manipulation
 -   and [`ggplot2`](https://ggplot2.tidyverse.org/ "Click for More Info on ggplot2") for plotting
 
-<div style="position: absolute; bottom: 9em; right: 10em;">
-  <img src="https://www.tidyverse.org/css/images/hex/readr.png" width="100">
-  <img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width="100">
-  <img src="https://www.tidyverse.org/css/images/hex/ggplot2.png" width="100">
-</div>
+::: {style="position: absolute; bottom: 9em; right: 10em;"}
+<img src="https://www.tidyverse.org/css/images/hex/readr.png" width="100"/> <img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width="100"/> <img src="https://www.tidyverse.org/css/images/hex/ggplot2.png" width="100"/>
+:::
+
 ::: {.callout-note .fragment}
 ## Shortcut
 
@@ -242,7 +241,7 @@ library(c(readr, dplyr, ggplot2))
 #| echo: true
 
 # Load data file into a new data frame
-konzaData <- read_csv("https://connorb.github.io/data/konza_fqi.csv")
+konzaData <- read_csv("Data/konza_fqi.csv")
 ```
 
 ![](images/loadData.png){fig-align="center" auto-animate="true"}
@@ -325,6 +324,7 @@ konzaData %>%
 
 -   The + is how you add a new layer or element to your plot.
 :::
+
 [What makes a "good" plot?]{.fragment}
 
 ## Plotting Data {auto-animate="true"}
@@ -343,6 +343,7 @@ konzaData %>%
        x = "Grazing Treatment",
        y = "Floristic Quality Index (FQI)")
 ```
+
 [What if we want to add all the observations as points to the boxplot?]{.fragment}
 
 ## Plotting Data {auto-animate="true"}
