@@ -130,7 +130,7 @@
     "href": "courses/field_ecology/intro2r/Intro2RPres.html#loading-data",
     "title": "Intro to R, Using R and RStudio",
     "section": "Loading Data",
-    "text": "Loading Data\n\n# Load data file into a new data frame\nkonzaData &lt;- read_csv(\"https://connorb.github.io/data/konza_fqi.csv\")"
+    "text": "Loading Data\n\n# Load data file into a new data frame\nkonzaData &lt;- read_csv(\"Data/konza_fqi.csv\")"
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-a-data-frame",
