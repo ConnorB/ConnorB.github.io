@@ -16,7 +16,7 @@ website:
   navbar:
     left:
       - text: About
-        href: about.qmd
+        href: index.qmd
       - text: Publications
         href: publications.qmd
       - text: Teaching
