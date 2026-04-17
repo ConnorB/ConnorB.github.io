@@ -3,8 +3,7 @@ title: "Publications"
 toc: true
 number-sections: false
 format:
-  html:
-    section-divs: false   # helps ToC + clean inserted HTML
+  html: default
 ---
 
 ```{r}
@@ -214,7 +213,7 @@ compose_section <- function(grp, empty_msg) {
 
     # Only add a heading if year is not NA
     if (!is.na(y)) {
-      out <- c(out, sprintf("<h2>%s</h2>", as.character(y)))
+      out <- c(out, sprintf('<h3 class="pub-year">%s</h3>', as.character(y)))
     }
 
     for (e in entries) {
