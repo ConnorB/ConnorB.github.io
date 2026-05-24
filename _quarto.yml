@@ -43,6 +43,8 @@ website:
 format:
   html:
     theme: darkly
-    css: styles.css   
+    css: styles.css
     toc: true
+    include-in-header:
+      - assets/mastodon-verify.html
             
