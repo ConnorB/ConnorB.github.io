@@ -15,7 +15,7 @@ css: styles.css
 
 <div class="social-icons">
 [{{< fa brands github >}}](https://github.com/ConnorB){target="_blank"} &nbsp;
-[{{< fa brands mastodon >}}](https://mastodon.world/@connorbrown){target="_blank"} &nbsp;
+[{{< fa brands mastodon >}}](https://fediscience.org/@connor){target="_blank"} &nbsp;
 [{{< fa brands instagram >}}](https://instagram.com/conbro_){target="_blank"} &nbsp;
 [{{< fa brands bluesky >}}](https://bsky.app/profile/connorbrown.bsky.social){target="_blank"} &nbsp;
 [{{< fa brands twitter >}}](https://x.com/eco_conn){target="_blank"} &nbsp;
