@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lectures\nField Ecology\n\n\nTeaching Assistant\n\nEVRN 615 Capstone, Environmental Studies Program, University of Kansas\nEVRN 460 Field Ecology, Environmental Studies Program, University of Kansas\nBIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University\nBIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Connor Brown",
+    "section": "",
+    "text": "I am a PhD Candidate at the Kansas Geological Survey and Department of Geology at the University of Kansas in Dr. Erin Seybold’s lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.\nI previously completed an M.S. in Biology at Sam Houston State University, where I worked with Dr. Amber Ulseth on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with Dr. Allison Pease and Dr. Kelbi Delaune on Pecos River macroinvertebrate communities.\nMy research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science."
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
@@ -26,13 +40,6 @@
     "title": "Publications",
     "section": "In-Prep",
     "text": "In-Prep\n\n\nNetwork Connectivity and Local Hydrology Drive DOM Composition in a Non-Perennial Stream\n\n\nSarah M. Flynn, Rebecca Hale, Erin Seybold, Stephen Plont, Michelle Busch, Alexi Sommerville, Connor L. Brown, Amy. J. Burgin\n\n\nJGR: Biogeosciences • In preparation\n\n\n\n\n\n\n\nEcosystem Metabolism of Coastal Texas Streams Across Precipitation Regimes and Land Use Gradients\n\n\nConnor L. Brown, Christopher F. Fraizer, Christopher J. Patrick, Amber J. Ulseth\n\n\nEcosystems • In preparation"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Connor Brown",
-    "section": "",
-    "text": "I am a PhD Candidate at the Kansas Geological Survey and Department of Geology at the University of Kansas in Dr. Erin Seybold’s lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.\nI previously completed an M.S. in Biology at Sam Houston State University, where I worked with Dr. Amber Ulseth on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with Dr. Allison Pease and Dr. Kelbi Delaune on Pecos River macroinvertebrate communities.\nMy research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science."
   },
   {
     "objectID": "courses/field_ecology/intro2r/Intro2RPres.html#what-is-r",
@@ -215,13 +222,6 @@
     "title": "Intro to R, Using R and RStudio",
     "section": "Learning More",
     "text": "Learning More\n\n\nThe Carpentries\n\nTeaches foundational coding and data science skills to researchers worldwide, all lessons are published online.\n\nThe Carpentries Workshops @ KU:\n\n\nSoftware Carpentry\n\nAutomate tasks using the Unix Shell, track and share your work using version control, and write software in Python or R that is readable, reusable, and reliable.\n\n\n\nData Carpentry\n\nOrganize, clean, and query your data using open-source tools. Reproducibly analyze and visualize your data using Python or R.\n\n\n\n\n\n\nSpring 2026 - EVRN 420: Environmental Data Science W/ Dr. Zimmerman."
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Lectures\nField Ecology\n\n\nTeaching Assistant\n\nEVRN 615 Capstone, Environmental Studies Program, University of Kansas\nEVRN 460 Field Ecology, Environmental Studies Program, University of Kansas\nBIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University\nBIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University"
   },
   {
     "objectID": "courses.html",
