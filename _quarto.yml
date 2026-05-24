@@ -29,7 +29,7 @@ website:
       - icon: github
         href: https://github.com/ConnorB
       - icon: mastodon
-        href: https://mastodon.world/@connorbrown
+        href: https://fediscience.org/@connor
       - icon: instagram
         href: https://instagram.com/conbro_
       - text: "{{< fa brands bluesky >}}"
