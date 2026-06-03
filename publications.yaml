@@ -1,3 +1,17 @@
+- title: "Network Connectivity and Local Hydrology Drive DOM Composition in a Non-Perennial Stream"
+  authors:
+    - "Sarah M. Flynn"
+    - "Rebecca Hale"
+    - "Erin Seybold"
+    - "Stephen Plont"
+    - "Michelle Busch"
+    - "Alexi Sommerville"
+    - "me"
+    - "Amy. J. Burgin"
+  date: 2026-05-02
+  venue: "JGR: Biogeosciences"
+  doi: "10.1029/2025JG009568"
+  
 - title: "Hydrologic, biogeochemical, microbial, and macroinvertebrate responses to network expansion, contraction, and disconnection across headwater stream networks with distinct physiography in Alabama, USA"
   authors:
     - "Stephen Plont"
@@ -36,19 +50,6 @@
   date: 2025-12-11
   venue: "Inland Waters"
   doi: "10.1080/20442041.2025.2602550"
-
-- title: "Network Connectivity and Local Hydrology Drive DOM Composition in a Non-Perennial Stream"
-  authors:
-    - "Sarah M. Flynn"
-    - "Rebecca Hale"
-    - "Erin Seybold"
-    - "Stephen Plont"
-    - "Michelle Busch"
-    - "Alexi Sommerville"
-    - "me"
-    - "Amy. J. Burgin"
-  venue: "JGR: Biogeosciences"
-  status: "In preparation"
 
 - title: "Precipitation regime drives key alterations in subtropical stream fish community assembly and functional trait distribution across a major rainfall gradient"
   authors:

@@ -1,3 +1,16 @@
+- title: "AIMS Great Plains, macroinvertebrate sequences (AIMS_GP_MACR)"
+  authors:
+    - "Michelle Busch"
+    - "Alice Belskis"
+    - "me"
+    - "Sarah Flynn"
+    - "Stephen Cook"
+    - "Daniel Allen"
+    - "Amy Burgin"
+  date: 2026-06-03
+  venue: "HydroShare"
+  doi: "10.4211/hs.8929cd9d067b4f98858d364d7593d6fc"
+  
 - title: "AIMS Johnston Draw Continuous Stage and Discharge at Watershed Outlet Data (AIMS_MW_JDR_DISC)"
   authors:
     - "me"
