@@ -42,7 +42,9 @@ website:
         href: https://orcid.org/0000-0002-9680-8930
 format:
   html:
-    theme: darkly
+    theme:
+      - darkly
+      - custom.scss
     css: styles.css
     toc: true
     include-in-header:
