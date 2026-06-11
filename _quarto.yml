@@ -19,6 +19,8 @@ website:
         href: index.qmd
       - text: Publications
         href: publications.qmd
+      - text: CV
+        href: cv.qmd
       - text: Teaching
         href: teaching.qmd
   # Footer with same social links

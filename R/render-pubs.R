@@ -1,0 +1,201 @@
+# Shared publication/dataset rendering, sourced by publications.qmd and cv.qmd
+
+ME_NAME <- "Connor L. Brown"  # <- how to render "me" in authors
+
+`%||%` <- function(x, y) if (is.null(x)) y else x
+
+esc <- function(x) {
+  if (is.null(x)) return("")
+  x <- as.character(x)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;",  x, fixed = TRUE)
+  x <- gsub(">", "&gt;",  x, fixed = TRUE)
+  x
+}
+
+# Normalize to a list of entries with convenience fields
+normalize_entry <- function(key, e) {
+  # authors with "me"
+  authors <- e$authors
+  if (is.null(authors)) authors <- character(0)
+  authors_html <- vapply(
+    authors,
+    function(a) {
+      a_chr <- as.character(a)
+      if (tolower(trimws(a_chr)) == "me") sprintf("<strong>%s</strong>", esc(ME_NAME)) else esc(a_chr)
+    },
+    character(1)
+  ) |> paste(collapse = ", ")
+
+  # year from year or date
+  to_year <- function(d) {
+    y <- suppressWarnings(as.integer(format(as.Date(d), "%Y")))
+    if (is.na(y)) NA_integer_ else y
+  }
+  yr <- if (!is.null(e$year)) as.integer(e$year)
+        else if (!is.null(e$date)) to_year(e$date)
+        else NA_integer_
+  to_date <- function(d) {
+    suppressWarnings(as.Date(d))
+    }
+  date_val <- if (!is.null(e$date)) to_date(e$date)
+  else if (!is.null(e$year)) as.Date(paste0(e$year, "-01-01"))
+  else as.Date(NA)
+  # detect "published" from fields OR links (DOI/Published)
+  has_pub_field <- !is.null(e$published_url) || !is.null(e$doi)
+  has_pub_link <- FALSE
+  if (!is.null(e$links) && length(e$links)) {
+    has_pub_link <- any(vapply(
+      e$links,
+      function(li) {
+        txt <- tolower(as.character(li$text %||% ""))
+        href <- as.character(li$href %||% "")
+        grepl("^https?://doi\\.org/", href) || txt %in% c("published","journal","publisher","doi")
+      },
+      logical(1)
+    ))
+  }
+
+  list(
+    .key = key,
+    title = e$title,
+    authors_html = authors_html,
+    venue = e$venue,
+    year = yr,
+    .date = date_val,
+    status = e$status,
+    doi = e$doi,
+    published_url = e$published_url,
+    preprint = e$preprint,
+    pdf = e$pdf,
+    code = e$code,
+    data = e$data,
+    links = e$links,              # keep generic links for rendering
+    .is_published = (has_pub_field || has_pub_link)
+  )
+}
+
+# Sort (newest date first)
+sort_entries <- function(xs) {
+  if (!length(xs)) return(xs)
+  date_vec <- vapply(xs, function(z) {
+    d <- z$.date
+    if (is.null(d) || is.na(d)) as.Date(NA) else d
+  }, as.Date(NA))
+  date_safe <- ifelse(is.na(date_vec), as.Date(-Inf, origin = "1970-01-01"), date_vec)
+  ord <- order(-as.numeric(date_safe), na.last = TRUE)
+  xs[ord]
+}
+
+# Group by year
+split_by_year <- function(xs) {
+  if (!length(xs)) return(list(years = integer(0), groups = list()))
+  yrs <- vapply(xs, function(z) ifelse(is.na(z$year), NA_integer_, z$year), integer(1))
+  # Put NA years at the end as "Unknown"
+  known_idx <- which(!is.na(yrs))
+  years <- sort(unique(yrs[known_idx]), decreasing = TRUE)
+  groups <- lapply(years, function(y) Filter(function(x) identical(x$year, y), xs))
+  # Handle NA group if present
+  if (any(is.na(yrs))) {
+    years <- c(years, NA_integer_)
+    groups <- c(groups, list(Filter(function(x) is.na(x$year), xs)))
+  }
+  list(years = years, groups = groups)
+}
+
+# HTML helpers
+btn <- function(label, href, style = "secondary") {
+  if (is.null(href) || identical(href, "")) return("")
+  sprintf(
+    '<a class="btn btn-sm btn-%s me-2" href="%s" target="_blank" rel="noopener">%s</a>',
+    style, href, label
+  )
+}
+
+render_entry <- function(e) {
+  title  <- esc(e$title %||% "Untitled")
+  venue  <- esc(e$venue %||% "")
+  year   <- e$year
+  status <- esc(e$status %||% "")
+  authors_html <- e$authors_html %||% ""
+
+  # Specific fields first
+  links <- character()
+  if (!is.null(e$doi) && nzchar(e$doi))               links <- c(links, btn("DOI", paste0("https://doi.org/", e$doi), "success"))
+  if (!is.null(e$published_url) && nzchar(e$published_url)) links <- c(links, btn("Published", e$published_url, "success"))
+  if (!is.null(e$preprint) && nzchar(e$preprint))     links <- c(links, btn("Preprint", e$preprint, "dark"))
+  if (!is.null(e$pdf) && nzchar(e$pdf))               links <- c(links, btn("PDF", e$pdf))
+  if (!is.null(e$code) && nzchar(e$code))             links <- c(links, btn("Code", e$code, "info"))
+  if (!is.null(e$data) && nzchar(e$data))             links <- c(links, btn("Data", e$data, "info"))
+
+  # Then generic links from YAML (styled by common labels)
+  if (!is.null(e$links) && length(e$links)) {
+    map_style <- function(lbl) {
+      lbl_l <- tolower(lbl)
+      if (lbl_l %in% c("published","journal","publisher")) "primary"
+      else if (lbl_l %in% c("preprint")) "dark"
+      else if (lbl_l %in% c("code","software","github")) "info"
+      else if (lbl_l %in% c("data","dataset")) "info"
+      else "secondary"
+    }
+    gen <- vapply(e$links, function(li) {
+      lbl <- as.character(li$text %||% "")
+      href <- as.character(li$href %||% "")
+      btn(lbl, href, map_style(lbl))
+    }, character(1))
+    links <- c(links, gen)
+  }
+  links_html <- paste(links[links != ""], collapse = "")
+
+  parts <- character()
+  if (nzchar(venue)) parts <- c(parts, venue)
+  if (!is.na(year))  parts <- c(parts, as.character(year))
+  if (nzchar(status)) parts <- c(parts, status)
+  secondary <- paste(parts, collapse = " • ")
+
+  sprintf('
+<div class="mb-4 pb-3 border-bottom">
+  <div class="h5 mb-1">%s</div>
+  <div class="text-muted mb-1">%s</div>
+  <div class="text-muted mb-2"><em>%s</em></div>
+  <div>%s</div>
+</div>
+', title, authors_html, secondary, links_html)
+}
+
+# Compose section HTML
+compose_section <- function(grp, empty_msg, heading_tag = "h1") {
+  if (!length(grp$years)) return(sprintf("<p>%s</p>", empty_msg))
+  out <- character()
+  for (i in seq_along(grp$years)) {
+    y <- grp$years[[i]]
+    entries <- grp$groups[[i]]
+
+    # Only add a heading if year is not NA
+    if (!is.na(y)) {
+      out <- c(out, sprintf('<%s>%s</%s>', heading_tag, as.character(y), heading_tag))
+    }
+
+    for (e in entries) {
+      out <- c(out, render_entry(e))
+    }
+  }
+  paste(out, collapse = "\n")
+}
+
+# Load YAML and return year-grouped entries
+load_pub_groups <- function(pubs_path = "publications.yaml", ds_path = "datasets.yaml") {
+  raw <- yaml::read_yaml(pubs_path)
+  if (is.null(raw)) raw <- list()
+  raw_ds <- tryCatch(yaml::read_yaml(ds_path), error = function(e) list())
+  if (is.null(raw_ds)) raw_ds <- list()
+
+  items <- lapply(seq_along(raw), function(i) normalize_entry(as.character(i), raw[[i]]))
+  ds_items <- lapply(seq_along(raw_ds), function(i) normalize_entry(as.character(i), raw_ds[[i]]))
+
+  list(
+    published = split_by_year(sort_entries(Filter(function(x) isTRUE(x$.is_published), items))),
+    working   = split_by_year(sort_entries(Filter(function(x) !isTRUE(x$.is_published), items))),
+    datasets  = split_by_year(sort_entries(ds_items))
+  )
+}

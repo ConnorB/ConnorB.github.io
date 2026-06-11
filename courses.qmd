@@ -1,5 +1,6 @@
 ---
 title: "Courses"
+description: "Course materials from Connor L. Brown, including an Introduction to R for Field Ecology."
 editor: visual
 toc: true
 number-sections: false

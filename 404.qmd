@@ -1,0 +1,12 @@
+---
+title: "Page Not Found"
+description: "The page you were looking for doesn't exist."
+---
+
+Sorry, the page you were looking for doesn't exist or has moved.
+
+Try one of these instead:
+
+- [Home](/index.qmd)
+- [Publications](/publications.qmd)
+- [CV](/cv.qmd)

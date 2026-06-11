@@ -1,0 +1,100 @@
+---
+title: "Curriculum Vitae"
+description: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
+toc: true
+number-sections: false
+execute:
+  freeze: false
+format:
+  html: default
+---
+
+[Connor.Brown@KU.edu](mailto:Connor.Brown@KU.edu)
+
+## Education
+
+**Ph.D., Geology** <span class="float-end">2021–Present</span>\
+University of Kansas, Lawrence, Kansas
+
+**M.S., Biology** <span class="float-end">2019–2022</span>\
+Sam Houston State University, Huntsville, Texas\
+**Thesis:** The Influence of Land Use and Precipitation on Stream Ecosystem Metabolism\
+**Relevant Coursework:** Ichthyology, Invertebrate Zoology, Biogeography, Biostatistics, Hydrology, Stream Ecology
+
+**B.S., Natural Resources Management** <span class="float-end">2016–2018</span>\
+Texas Tech University, Lubbock, Texas\
+**Concentration:** Aquatic and Fisheries Biology\
+**Minor:** Geographic Information Science and Technology\
+**Relevant Coursework:** Freshwater Bioassessment, Watershed Planning, Fisheries Conservation and Management, Introduction to Geographic Information Systems, Advanced Geographic Information Systems, Cartographic Design, Spatial Analysis, GPS Mapping, Aerial Photo Interpretation, Integrated Natural Resources Management Skills, Wildlife and Vegetation Techniques, Diversity of Life, Genetics, Introduction to Conservation Science
+
+## Experience
+
+**Graduate Research Assistant** <span class="float-end">2020–2021</span>\
+*Stream and Biogeochemistry Lab, Department of Biological Sciences, Sam Houston State University*\
+Managed data collection, analyzed time series data, estimated ecosystem metabolism using R, and collected macroinvertebrates and fish for the NSF-funded project *Thresholds in Ecosystem Responses to Rainfall Gradients (TERRG)*.
+
+**Graduate Research Assistant** <span class="float-end">2019</span>\
+*Texas Research Institute for Environmental Studies, Sam Houston State University*\
+Worked on a funded grant from the Texas Military Department to collect invertebrate and habitat data, identified terrestrial and aquatic invertebrates, and pinned specimens.
+
+**Teaching Assistant** <span class="float-end">2019–2020</span>\
+*Department of Biological Sciences, Sam Houston State University*\
+Taught three sections of Ecology Lab and Environmental Science, including lecturing, leading lab activities, and assisting students with ecology and environmental science concepts.
+
+**Undergraduate Researcher** <span class="float-end">2016–2018</span>\
+*Department of Natural Resources Management, Texas Tech University*\
+Proposed and conducted a research project on the Pecos River. Field work included deploying Hester-Dendy samplers and collecting habitat measurements. Lab work included sorting and identifying macroinvertebrates using dichotomous keys.
+
+**Undergraduate Internship** <span class="float-end">2016</span>\
+*Department of Natural Resources Management, Texas Tech University*\
+Assisted with dissertation-related field and lab work, including transect setup, macroinvertebrate and fish collection, water sampling, habitat measurements, macroinvertebrate identification, and environmental DNA extraction.
+
+## Publications
+
+```{r}
+#| echo: false
+#| results: asis
+source("R/render-pubs.R")
+grp <- load_pub_groups()
+cat(compose_section(grp$published, "No published work yet.", heading_tag = "h3"))
+cat("<h3>In Preparation</h3>")
+cat(compose_section(grp$working, "", heading_tag = "h4"))
+```
+
+## Presentations
+
+**Brown, C.L.**, Busch, M.H., Plont, S., Benstead, J.P., Burgin, A.J., Hale, R.L., Seybold, E.C. (2025). *Hydrologic controls on oxygen regimes in non-perennial streams*. Society for Freshwater Science, San Juan, PR.
+
+**Brown, C.L.**, Plont, S., Burgin, A.J., Seybold, E.C. (2024). *The oxygen regimes of non-perennial streams*. The Water Science Conference, Saint Paul, MN.
+
+**Brown, C.L.**, Burgin, A.J., Seybold, E.C. (2023). *Flow variability drives changes in the oxygen regime of a non-perennial prairie stream*. Kansas Governor's Water Conference, Manhattan, KS.
+
+**Brown, C.L.**, Wheeler, C.T., Speir, S.L., Allen, D.C., Benstead, J.P., Burgin, A.J., Hale, R.L., Seybold, E.C. (2022). *Duration of drying controls the magnitude and recovery of ecosystem metabolism in U.S. intermittent streams*. Kansas Governor's Water Conference, Manhattan, KS.
+
+**Brown, C.L.**, Wheeler, C.T., Speir, S.L., Allen, D.C., Benstead, J.P., Burgin, A.J., Hale, R.L., Seybold, E.C. (2022). *Characterizing metabolism dynamics in U.S. intermittent streams*. Joint Aquatic Sciences Meeting, Grand Rapids, MI.
+
+**Brown, C.L.**, Carvallo, F., Frazier, C., Groff, C.M., Jenkins, V., Kinard, S.K., Solis, A.T., Strickland, B., Hogan, J.D., Patrick, C.J., Whiles, M.R., Zanden, H.V., Ulseth, A.J. (2021). *Ecosystem metabolism of coastal Texas streams across precipitation and land use gradients*. Society for Freshwater Science.
+
+**Brown, C.L.**, Delaune, K.D., Pease, A.A. (2018). *Spatial and temporal variation in benthic macroinvertebrate assemblage structure in salinized reaches of the Pecos River*. Desert Fishes Council, Death Valley, CA.
+
+**Brown, C.L.**, Delaune, K.D., Pease, A.A. (2018). *Macroinvertebrate community structure on the lower Pecos River*. Southwestern Association of Naturalists, San Marcos, TX.
+
+## Organizations & Committees
+
+- Kansas Geological Survey – Diversity, equity, and inclusion committee (2023–2024)
+- Society for Freshwater Science – Diversity, equity, and inclusion committee (2021)
+- Biological Sciences Graduate Student Organization, Treasurer (2019–2020)
+- Society of Freshwater Science (2018–Present)
+- Desert Fishes Council (2018–Present)
+- Southwestern Association of Naturalists (2017–Present)
+- Texas Tech Gay-Straight Alliance (2016–2018)
+- Circle K International, Texas A&M–Corpus Christi, President (2014–2016)
+
+## Research Funding
+
+**Brown, C.L.** (2017). Center for Active Learning and Undergraduate Research Engagement, Texas Tech University ($1,000).
+
+## Certifications
+
+1. GeoApps Certification, Esri (2018)
+2. SSI Advanced SCUBA Certification (2009)
