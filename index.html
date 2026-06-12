@@ -41,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-829bd33330dea05a3d335220837674e8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a6dfc72b8d327676abb320b79142fc0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-366e93bedcf59e6d7c7793fdcd472a92.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -89,10 +89,12 @@ gtag('config', 'G-ELB0F4QNPS', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Connor Brown">
 <meta property="og:description" content="Aquatic Ecologist | PhD Candidate |  | He/Him">
-<meta property="og:image" content="https://ConnorB.github.io/assets/images/shn_deco.jpg">
+<meta property="og:image" content="https://ConnorB.github.io/assets/images/shn_deco.webp">
+<meta property="og:image:alt" content="Connor with a post puller removing t-post from Shane Creek">
 <meta name="twitter:title" content="Connor Brown">
 <meta name="twitter:description" content="Aquatic Ecologist | PhD Candidate |  | He/Him">
-<meta name="twitter:image" content="https://ConnorB.github.io/assets/images/shn_deco.jpg">
+<meta name="twitter:image" content="https://ConnorB.github.io/assets/images/shn_deco.webp">
+<meta name="twitter:image:alt" content="Connor with a post puller removing t-post from Shane Creek">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -115,6 +117,10 @@ gtag('config', 'G-ELB0F4QNPS', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
@@ -163,7 +169,7 @@ gtag('config', 'G-ELB0F4QNPS', { 'anonymize_ip': true});
 
 <div class="grid">
 <div class="g-col-4">
-<p><img id="rotating-img" src="assets/images/shn_deco.jpg" class="rounded" style="width:100%; height:250px; object-fit:cover; display:block; margin:auto;"></p>
+<p><img id="rotating-img" src="assets/images/shn_deco.webp" alt="Connor with a post puller removing t-post from Shane Creek" class="rounded" style="width:100%; height:250px; object-fit:cover; display:block; margin:auto;"></p>
 <div class="social-icons">
 <p><a href="https://github.com/ConnorB" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i></a> &nbsp; <a href="https://fediscience.org/@connor" target="_blank"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> &nbsp; <a href="https://instagram.com/conbro_" target="_blank"><i class="fa-brands fa-instagram" aria-label="instagram"></i></a> &nbsp; <a href="https://bsky.app/profile/connorbrown.bsky.social" target="_blank"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> &nbsp; <a href="https://x.com/eco_conn" target="_blank"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> &nbsp; <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i></a> &nbsp; <a href="https://orcid.org/0000-0002-9680-8930" target="_blank"><i class="fa-brands fa-orcid" aria-label="orcid"></i></a></p>
 </div>
@@ -176,18 +182,23 @@ gtag('config', 'G-ELB0F4QNPS', { 'anonymize_ip': true});
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/images/con-header.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="assets/images/con-header.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" loading="lazy" alt="Connor standing in Kings Creek doing sensor maintenance"></p>
 </figure>
 </div>
 <script>
-  const images = ["assets/images/shn_deco.jpg", "assets/images/con_shn.png", "assets/images/gbj.png"];
+  const images = [
+    { src: "assets/images/shn_deco.webp", alt: "Connor with a post puller removing t-post from Shane Creek" },
+    { src: "assets/images/con_shn.webp",  alt: "Connor standing in an algae-covered pool next to a CO2 sensor" },
+    { src: "assets/images/gbj.webp",      alt: "Connor smiling with an adult stonefly on his hand in Idaho" }
+  ];
   let index = 0;
   const imgElement = document.getElementById("rotating-img");
 
   setInterval(() => {
     index = (index + 1) % images.length;
-    imgElement.src = images[index];
-  }, 10000); // change every 4 seconds
+    imgElement.src = images[index].src;
+    imgElement.alt = images[index].alt;
+  }, 10000); // change every 10 seconds
 </script>
 
 
