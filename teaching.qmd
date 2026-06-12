@@ -4,6 +4,11 @@ description: "Teaching experience of Connor L. Brown: field ecology lectures and
 editor: visual
 toc: true
 number-sections: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>#title-block-header .description { display: none; }</style>
 ---
 
 # Lectures

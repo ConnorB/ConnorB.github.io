@@ -4,6 +4,11 @@ description: "Course materials from Connor L. Brown, including an Introduction t
 editor: visual
 toc: true
 number-sections: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>#title-block-header .description { display: none; }</style>
 ---
 
 # Field Ecology

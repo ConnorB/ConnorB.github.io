@@ -6,7 +6,10 @@ number-sections: false
 execute:
   freeze: false
 format:
-  html: default
+  html:
+    include-in-header:
+      text: |
+        <style>#title-block-header .description { display: none; }</style>
 ---
 
 [Connor.Brown@KU.edu](mailto:Connor.Brown@KU.edu)
