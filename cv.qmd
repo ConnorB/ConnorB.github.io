@@ -2,6 +2,7 @@
 title: "Curriculum Vitae"
 description: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
 toc: false
+page-layout: full
 number-sections: false
 format:
   html:
@@ -12,6 +13,6 @@ format:
 
 <a class="btn btn-primary mb-3" href="/cbrown_cv.pdf" download>{{< fa download >}} Download PDF</a>
 
-<object data="/cbrown_cv.pdf" type="application/pdf" width="100%" style="height: 85vh; border: 1px solid var(--bs-border-color);">
+<object data="/cbrown_cv.pdf" type="application/pdf" width="100%" style="height: calc(100vh - 140px); min-height: 600px; border: 1px solid var(--bs-border-color);">
   <p>This browser can't display embedded PDFs. <a href="/cbrown_cv.pdf">Download the CV (PDF)</a> instead.</p>
 </object>
