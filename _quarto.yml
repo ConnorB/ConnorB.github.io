@@ -60,4 +60,5 @@ format:
     include-in-header:
       - assets/favicon/favicon.html
       - assets/mastodon-verify.html
+      - assets/css/fonts.html
             
