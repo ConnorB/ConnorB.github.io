@@ -47,7 +47,7 @@ render_software_entry <- function(e) {
 }
 
 # Load software.yaml and return rendered HTML for all entries
-load_software <- function(path = "software.yaml") {
+load_software <- function(path = "_data/software.yaml") {
   raw <- tryCatch(yaml::read_yaml(path), error = function(e) {
     warning(sprintf("Failed to read %s: %s", path, conditionMessage(e)), call. = FALSE)
     list()

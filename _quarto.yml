@@ -1,7 +1,6 @@
 project:
   type: website
   resources:
-    - data
     - assets
     - "*.pdf"  # CV PDF fetched from ConnorB/CV during CI build
 
@@ -14,7 +13,7 @@ author-meta: "Connor Brown"
 
 website:
   site-url: https://ConnorB.github.io
-  favicon: assets/images/favicon.ico
+  favicon: assets/favicon/favicon.ico
   twitter-card: true
   open-graph: true
   llms-txt: true
@@ -55,9 +54,10 @@ format:
   html:
     theme:
       - darkly
-      - custom.scss
-    css: styles.css
+      - assets/css/custom.scss
+    css: assets/css/styles.css
     toc: true
     include-in-header:
+      - assets/favicon/favicon.html
       - assets/mastodon-verify.html
             

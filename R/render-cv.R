@@ -21,7 +21,7 @@ dates_span <- function(d) {
 }
 
 # --- Teaching --------------------------------------------------------------
-render_teaching <- function(path = "teaching.yaml") {
+render_teaching <- function(path = "_data/teaching.yaml") {
   items <- read_cv_yaml(path)
   if (!length(items)) return("<p>No teaching listed.</p>")
   parts <- lapply(items, function(e) {

@@ -190,7 +190,7 @@ compose_section <- function(grp, empty_msg, heading_tag = "h1") {
 }
 
 # Load YAML and return year-grouped entries
-load_pub_groups <- function(pubs_path = "publications.yaml", ds_path = "datasets.yaml") {
+load_pub_groups <- function(pubs_path = "_data/publications.yaml", ds_path = "_data/datasets.yaml") {
   # YAML is fetched from the private ConnorB/CV repo during the CI build (see
   # the publish workflow); warn rather than hard-fail if a file is absent
   # (e.g. local preview without a fetch).

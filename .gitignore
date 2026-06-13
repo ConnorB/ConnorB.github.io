@@ -3,9 +3,9 @@
 # CV assets (PDF + YAML) are fetched from the private ConnorB/CV repo during
 # CI, not committed here
 /cbrown_cv.pdf
-/publications.yaml
-/datasets.yaml
-/teaching.yaml
+/_data/publications.yaml
+/_data/datasets.yaml
+/_data/teaching.yaml
 # History files
 .Rhistory
 .Rapp.history

@@ -41,10 +41,12 @@ jobs:
           api="https://api.github.com/repos/ConnorB/CV/contents"
           raw() { curl -fsSL -H "Authorization: Bearer $CV_TOKEN" -H "Accept: application/vnd.github.raw" "$@"; }
 
-          # Data behind the Publications and Teaching pages
+          # Data behind the Publications and Teaching pages (read from _data/ by
+          # the R render scripts; software.yaml already lives there, committed).
+          mkdir -p _data
           for y in publications datasets teaching; do
-            raw "${api}/yaml/${y}.yaml?ref=main" -o "${y}.yaml"
-            echo "fetched ${y}.yaml"
+            raw "${api}/yaml/${y}.yaml?ref=main" -o "_data/${y}.yaml"
+            echo "fetched _data/${y}.yaml"
           done
 
           # Newest Month_Year.pdf committed in the CV repo's pdf/ folder
@@ -66,7 +68,7 @@ jobs:
           fi
           echo "Latest CV PDF: $newest"
           raw "${api}/pdf/${newest}?ref=main" -o cbrown_cv.pdf
-          ls -lh cbrown_cv.pdf ./*.yaml
+          ls -lh cbrown_cv.pdf _data/*.yaml
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
