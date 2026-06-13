@@ -1,5 +1,11 @@
 /.quarto/
 /_site/
+# CV assets (PDF + YAML) are fetched from the private ConnorB/CV repo during
+# CI, not committed here
+/cbrown_cv.pdf
+/publications.yaml
+/datasets.yaml
+/teaching.yaml
 # History files
 .Rhistory
 .Rapp.history

@@ -25,6 +25,49 @@ jobs:
         run: |
           Rscript -e 'options(repos = c(CRAN = sprintf("https://packagemanager.posit.co/cran/latest/bin/linux/noble-%s/%s", R.version["arch"], substr(getRversion(), 1, 3)))); install.packages(c("rmarkdown", "downlit", "xml2"))'
 
+      # Pull the latest CV assets from the private ConnorB/CV repo at build time:
+      # the YAML that drives the Publications and Teaching pages, and the newest
+      # CV PDF (served at /cbrown_cv.pdf via the "*.pdf" resource in _quarto.yml).
+      # Nothing from CV is committed to this repo.
+      - name: Fetch CV assets from ConnorB/CV
+        env:
+          CV_TOKEN: ${{ secrets.CV_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CV_TOKEN:-}" ]; then
+            echo "::error::CV_TOKEN secret is not set; cannot fetch CV assets." >&2
+            exit 1
+          fi
+          api="https://api.github.com/repos/ConnorB/CV/contents"
+          raw() { curl -fsSL -H "Authorization: Bearer $CV_TOKEN" -H "Accept: application/vnd.github.raw" "$@"; }
+
+          # Data behind the Publications and Teaching pages
+          for y in publications datasets teaching; do
+            raw "${api}/yaml/${y}.yaml?ref=main" -o "${y}.yaml"
+            echo "fetched ${y}.yaml"
+          done
+
+          # Newest Month_Year.pdf committed in the CV repo's pdf/ folder
+          newest=$(curl -fsSL \
+              -H "Authorization: Bearer $CV_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "${api}/pdf?ref=main" \
+            | jq -r '.[].name | select(endswith(".pdf"))' \
+            | while read -r f; do
+                base=${f%.pdf}; mon=${base%_*}; yr=${base##*_}
+                case "$yr" in [0-9][0-9][0-9][0-9]) ;; *) continue ;; esac
+                mnum=$(date -d "1 ${mon} 2000" +%m 2>/dev/null || echo 00)
+                printf '%s%s\t%s\n' "$yr" "$mnum" "$f"
+              done \
+            | sort | tail -n1 | cut -f2)
+          if [ -z "${newest:-}" ]; then
+            echo "::error::No PDF found in ConnorB/CV pdf/." >&2
+            exit 1
+          fi
+          echo "Latest CV PDF: $newest"
+          raw "${api}/pdf/${newest}?ref=main" -o cbrown_cv.pdf
+          ls -lh cbrown_cv.pdf ./*.yaml
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:

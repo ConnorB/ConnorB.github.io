@@ -3,6 +3,7 @@ project:
   resources:
     - data
     - assets
+    - "*.pdf"  # CV PDF fetched from ConnorB/CV during CI build
 
 execute:
   freeze: auto

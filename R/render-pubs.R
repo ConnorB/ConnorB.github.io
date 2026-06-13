@@ -13,12 +13,10 @@ esc <- function(x) {
   x
 }
 
-# Normalize to a list of entries with convenience fields
-normalize_entry <- function(key, e) {
-  # authors with "me"
-  authors <- e$authors
-  if (is.null(authors)) authors <- character(0)
-  authors_html <- vapply(
+# Render an author list to HTML, bolding "me" -> ME_NAME
+authors_html_from <- function(authors) {
+  if (is.null(authors) || !length(authors)) return("")
+  vapply(
     authors,
     function(a) {
       a_chr <- as.character(a)
@@ -26,6 +24,14 @@ normalize_entry <- function(key, e) {
     },
     character(1)
   ) |> paste(collapse = ", ")
+}
+
+# Normalize to a list of entries with convenience fields
+normalize_entry <- function(key, e) {
+  # authors with "me"
+  authors <- e$authors
+  if (is.null(authors)) authors <- character(0)
+  authors_html <- authors_html_from(authors)
 
   # year from year or date
   to_year <- function(d) {
@@ -185,10 +191,18 @@ compose_section <- function(grp, empty_msg, heading_tag = "h1") {
 
 # Load YAML and return year-grouped entries
 load_pub_groups <- function(pubs_path = "publications.yaml", ds_path = "datasets.yaml") {
-  raw <- yaml::read_yaml(pubs_path)
-  if (is.null(raw)) raw <- list()
-  raw_ds <- tryCatch(yaml::read_yaml(ds_path), error = function(e) list())
-  if (is.null(raw_ds)) raw_ds <- list()
+  # YAML is fetched from the private ConnorB/CV repo during the CI build (see
+  # the publish workflow); warn rather than hard-fail if a file is absent
+  # (e.g. local preview without a fetch).
+  read_or_warn <- function(p) {
+    raw <- tryCatch(yaml::read_yaml(p), error = function(e) {
+      warning(sprintf("Failed to read %s: %s", p, conditionMessage(e)), call. = FALSE)
+      list()
+    })
+    if (is.null(raw)) list() else raw
+  }
+  raw <- read_or_warn(pubs_path)
+  raw_ds <- read_or_warn(ds_path)
 
   items <- lapply(seq_along(raw), function(i) normalize_entry(as.character(i), raw[[i]]))
   ds_items <- lapply(seq_along(raw_ds), function(i) normalize_entry(as.character(i), raw_ds[[i]]))

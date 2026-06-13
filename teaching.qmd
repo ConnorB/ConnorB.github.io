@@ -17,7 +17,9 @@ format:
 
 # Teaching Assistant
 
--   EVRN 615 Capstone, Environmental Studies Program, University of Kansas
--   EVRN 460 Field Ecology, Environmental Studies Program, University of Kansas
--   BIOL 1401 (Spring 2020) Environmental Science, Dept. of Biological Sciences, Sam Houston State University
--   BIOL 3409 (Spring 2019-Fall 2020) General Ecology, Dept. of Biological Sciences, Sam Houston State University
+```{r}
+#| echo: false
+#| results: asis
+source("R/render-cv.R")
+cat(render_teaching())
+```
