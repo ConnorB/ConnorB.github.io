@@ -1,16 +1,11 @@
 ---
 title: "Courses"
-description: "Course materials from Connor L. Brown, including an Introduction to R for Field Ecology."
+description-meta: "Course materials from Connor L. Brown, including an Introduction to R for Field Ecology."
 editor: visual
 toc: true
 number-sections: false
-format:
-  html:
-    include-in-header:
-      text: |
-        <style>#title-block-header .description { display: none; }</style>
 ---
 
 # Field Ecology
 
--   [Intro to R](courses/field_ecology/intro2r/Intro2RPres.qmd)
+- [Intro to R](courses/field_ecology/intro2r/Intro2RPres.qmd)

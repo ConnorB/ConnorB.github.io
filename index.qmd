@@ -1,5 +1,6 @@
 ---
 title: "Connor Brown"
+pagetitle: "Connor Brown"
 description: "Aquatic Ecologist | PhD Candidate | <span class='pride-flag'></span> | He/Him"
 page-layout: full
 css: styles.css

@@ -7,11 +7,17 @@ project:
 
 execute:
   freeze: auto
+  
+# Metadata stuff
+pagetitle: "{{< meta title >}} | Connor Brown"
+author-meta: "Connor Brown"
+
 website:
   site-url: https://ConnorB.github.io
   favicon: assets/images/favicon.ico
   twitter-card: true
   open-graph: true
+  llms-txt: true
   google-analytics: "G-ELB0F4QNPS"
   # Navbar with social links
   navbar:
@@ -20,6 +26,8 @@ website:
         href: index.qmd
       - text: Publications
         href: publications.qmd
+      - text: Software
+        href: software.qmd
       - text: CV
         href: cv.qmd
       - text: Teaching

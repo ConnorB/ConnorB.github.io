@@ -1,0 +1,28 @@
+# R packages maintained by Connor L. Brown.
+# Unlike publications/datasets/teaching (fetched from the private ConnorB/CV
+# repo during CI), this file is committed to the website repo directly.
+- name: "preMetabolizer"
+  title: "A utility package for streamMetabolizer"
+  role: "Author & maintainer"
+  description: "Turns raw field and environmental data into standardized inputs for stream metabolism models — timestamp standardization, unit conversion, weather-station data retrieval, and dissolved oxygen, light, and barometric pressure calculations."
+  install: 'install.packages("preMetabolizer", repos = "https://connorb.r-universe.dev")'
+  links:
+    - text: "Docs"
+      href: "https://connorb.github.io/preMetabolizer/"
+    - text: "R-universe"
+      href: "https://connorb.r-universe.dev/preMetabolizer"
+    - text: "GitHub"
+      href: "https://github.com/ConnorB/preMetabolizer"
+
+- name: "flowcam"
+  title: "Download and animate USGS stream-gage camera images"
+  role: "Author & maintainer"
+  description: "A tidy interface to the USGS National Imagery Management System (NIMS) API: discover stream-gage cameras across the US, list and download their images, and assemble them into animated GIFs or MP4 videos — all from R."
+  install: 'install.packages("flowcam", repos = "https://connorb.r-universe.dev")'
+  links:
+    - text: "Docs"
+      href: "https://connorb.github.io/flowcam/"
+    - text: "R-universe"
+      href: "https://connorb.r-universe.dev/flowcam"
+    - text: "GitHub"
+      href: "https://github.com/ConnorB/flowcam"

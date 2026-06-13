@@ -1,14 +1,9 @@
 ---
 title: "Curriculum Vitae"
-description: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
+description-meta: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
 toc: false
 page-layout: full
 number-sections: false
-format:
-  html:
-    include-in-header:
-      text: |
-        <style>#title-block-header .description { display: none; }</style>
 ---
 
 <a class="btn btn-primary mb-3" href="/cbrown_cv.pdf" download>{{< fa download >}} Download PDF</a>

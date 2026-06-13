@@ -1,0 +1,22 @@
+---
+title: "Software"
+description-meta: "Open-source R packages developed and maintained by Connor L. Brown for aquatic ecology and stream data workflows."
+toc: true
+number-sections: false
+execute:
+  freeze: false
+---
+
+```{r}
+#| echo: false
+source("R/render-software.R")
+SOFTWARE_HTML <- load_software()
+```
+
+I develop and maintain open-source R packages for working with aquatic and stream-ecology data. All are released under the AGPL (>= 3) license — contributions and bug reports are welcome on GitHub.
+
+```{r}
+#| echo: false
+#| results: asis
+cat(SOFTWARE_HTML)
+```

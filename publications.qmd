@@ -1,15 +1,10 @@
 ---
 title: "Publications"
-description: "Peer-reviewed papers, datasets, and in-prep work by Connor L. Brown on stream ecosystem ecology and biogeochemistry."
+description-meta: "Peer-reviewed papers, datasets, and in-prep work by Connor L. Brown on stream ecosystem ecology and biogeochemistry."
 toc: true
 number-sections: false
 execute:
   freeze: false
-format:
-  html:
-    include-in-header:
-      text: |
-        <style>#title-block-header .description { display: none; }</style>
 ---
 
 ```{r}
