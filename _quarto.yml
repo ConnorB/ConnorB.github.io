@@ -17,6 +17,7 @@ website:
   twitter-card: true
   open-graph: true
   llms-txt: true
+  search: false
   google-analytics: "G-ELB0F4QNPS"
   # Navbar with social links
   navbar:

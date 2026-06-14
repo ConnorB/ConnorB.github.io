@@ -1,5 +1,8 @@
 /.quarto/
 /_site/
+*_files/
+_quarto_internal_scss_error.scss
+.DS_Store
 # CV assets (PDF + YAML) are fetched from the private ConnorB/CV repo during
 # CI, not committed here
 /CBrown_CV.pdf
