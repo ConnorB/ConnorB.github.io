@@ -18,12 +18,12 @@ The site is a Quarto website (`_quarto.yml`) using the `darkly` theme with custo
 
 ### Directories
 
-- `R/` — rendering helpers sourced by the `.qmd` pages. [`render-pubs.R`](R/render-pubs.R) holds shared utilities (HTML escaping, link buttons, year grouping) reused by [`render-software.R`](R/render-software.R) and [`render-cv.R`](R/render-cv.R).
-- `_data/` — YAML driving the content-heavy pages (`publications.yaml`, `datasets.yaml`, `teaching.yaml`, `software.yaml`). The R scripts read these and emit HTML.
-- `assets/` — CSS/SCSS, fonts, favicon, and images.
-- `_extensions/` — vendored Quarto extensions (Font Awesome).
-- `_freeze/` — Quarto's frozen computation cache (`freeze: auto`).
-- `courses/` — standalone course materials.
+- [`R/`](R/) — rendering helpers sourced by the `.qmd` pages. [`render-pubs.R`](R/render-pubs.R) holds shared utilities (HTML escaping, link buttons, year grouping) reused by [`render-software.R`](R/render-software.R) and [`render-cv.R`](R/render-cv.R).
+- [`_data/`](_data/) — YAML driving the content-heavy pages (`publications.yaml`, `datasets.yaml`, `teaching.yaml`, `software.yaml`). The R scripts read these and emit HTML.
+- [`assets/`](assets/) — CSS/SCSS, fonts, favicon, and images.
+- [`_extensions/`](_extensions/) — vendored Quarto extensions (Font Awesome).
+- [`_freeze/`](_freeze/) — Quarto's frozen computation cache (`freeze: auto`).
+- [`courses/`](courses/) — standalone course materials.
 
 ## Data flow: the private CV repo
 
