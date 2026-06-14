@@ -1,4 +1,6 @@
 # robots.txt for ConnorB.github.io
 
 User-agent: *
-Disallow: /data/
+Allow: /
+
+Sitemap: https://ConnorB.github.io/sitemap.xml

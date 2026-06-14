@@ -18,6 +18,7 @@ css: assets/css/styles.css
 <img id="rotating-img"
      src="assets/images/shn_deco.webp"
      alt="Connor with a post puller removing t-post from Shane Creek"
+     width="800" height="838"
      class="rounded profile-photo" />
 
 
@@ -40,20 +41,40 @@ I previously completed an M.S. in Biology at Sam Houston State University, where
 My research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science.
 :::
 :::::
-![](assets/images/con-header.webp){fig-align="center" fig-alt="Connor standing in Kings Creek doing sensor maintenance" loading="lazy"}
+<img src="assets/images/con-header.webp"
+     class="img-fluid figure-img d-block mx-auto"
+     width="1600" height="721"
+     loading="lazy" decoding="async"
+     alt="Connor standing in Kings Creek doing sensor maintenance" />
 
 <script>
-  const images = [
-    { src: "assets/images/shn_deco.webp", alt: "Connor with a post puller removing t-post from Shane Creek" },
-    { src: "assets/images/con_shn.webp",  alt: "Connor standing in an algae-covered pool next to a CO2 sensor" },
-    { src: "assets/images/gbj.webp",      alt: "Connor smiling with an adult stonefly on his hand in Idaho" }
-  ];
-  let index = 0;
-  const imgElement = document.getElementById("rotating-img");
+  (function () {
+    const images = [
+      { src: "assets/images/shn_deco.webp", alt: "Connor with a post puller removing t-post from Shane Creek" },
+      { src: "assets/images/con_shn.webp",  alt: "Connor standing in an algae-covered pool next to a CO2 sensor" },
+      { src: "assets/images/gbj.webp",      alt: "Connor smiling with an adult stonefly on his hand in Idaho" }
+    ];
+    const imgEl = document.getElementById("rotating-img");
+    if (!imgEl) return;
 
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    imgElement.src = images[index].src;
-    imgElement.alt = images[index].alt;
-  }, 10000); // change every 10 seconds
+    // Respect users who prefer reduced motion: leave the first image static.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Preload the non-initial images so swaps don't flash.
+    images.slice(1).forEach(({ src }) => { const i = new Image(); i.src = src; });
+
+    let index = 0, timer = null;
+    const advance = () => {
+      index = (index + 1) % images.length;
+      imgEl.src = images[index].src;
+      imgEl.alt = images[index].alt;
+    };
+    const start = () => { if (!timer) timer = setInterval(advance, 10000); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+    // Pause rotation while the tab is hidden.
+    document.addEventListener("visibilitychange", () =>
+      document.visibilityState === "hidden" ? stop() : start());
+    start();
+  })();
 </script>

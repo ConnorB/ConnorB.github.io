@@ -14,6 +14,7 @@ author-meta: "Connor Brown"
 website:
   site-url: https://ConnorB.github.io
   favicon: assets/favicon/favicon.ico
+  image: assets/images/con-header.webp  # default social preview for image-less pages
   twitter-card: true
   open-graph: true
   llms-txt: true
@@ -35,14 +36,15 @@ website:
   # Footer with same social links
   page-footer:
     left: |
-      © 2026 Connor Brown
+      © <span id="footer-year">2026</span> Connor Brown
+      <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
     right: |
       <nav class="footer-social" aria-label="Social links">
         <a href="https://github.com/ConnorB" aria-label="GitHub">{{< fa brands github >}}</a>
         <a href="https://fediscience.org/@connor" rel="me" aria-label="Mastodon">{{< fa brands mastodon >}}</a>
         <a href="https://instagram.com/conbro_" aria-label="Instagram">{{< fa brands instagram >}}</a>
         <a href="https://bsky.app/profile/connorbrown.bsky.social" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
-        <a href="https://twitter.com/eco_conn" aria-label="X / Twitter">{{< fa brands twitter >}}</a>
+        <a href="https://x.com/eco_conn" aria-label="X / Twitter">{{< fa brands twitter >}}</a>
         <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" aria-label="Google Scholar">{{< fa brands google-scholar >}}</a>
         <a href="https://orcid.org/0000-0002-9680-8930" rel="me" aria-label="ORCID">{{< fa brands orcid >}}</a>
       </nav>
@@ -57,3 +59,4 @@ format:
       - assets/favicon/favicon.html
       - assets/mastodon-verify.html
       - assets/css/fonts.html
+      - assets/structured-data.html
