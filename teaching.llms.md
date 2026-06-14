@@ -1,10 +1,10 @@
 # Teaching
 
-# Lectures
+## Lectures
 
 [Field Ecology](courses.llms.md#field-ecology)
 
-# Teaching Assistant
+## Teaching Assistant
 
 Field Ecology Fall 2024, Fall 2025
 

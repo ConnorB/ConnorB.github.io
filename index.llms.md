@@ -4,7 +4,7 @@ Aquatic Ecologist \| PhD Candidate \| \| He/Him
 
 ![Connor with a post puller removing t-post from Shane Creek](assets/images/shn_deco.webp)
 
-[](https://github.com/ConnorB)   [](https://fediscience.org/@connor)   [](https://instagram.com/conbro_)   [](https://bsky.app/profile/connorbrown.bsky.social)   [](https://x.com/eco_conn)   [](https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en)   [](https://orcid.org/0000-0002-9680-8930)
+[](https://github.com/ConnorB) [](https://fediscience.org/@connor) [](https://instagram.com/conbro_) [](https://bsky.app/profile/connorbrown.bsky.social) [](https://x.com/eco_conn) [](https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en) [](https://orcid.org/0000-0002-9680-8930)
 
 I am a PhD Candidate at the [Kansas Geological Survey](https://kgs.ku.edu/water-resources-and-geohydrology) and [Department of Geology](https://geo.ku.edu) at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
 

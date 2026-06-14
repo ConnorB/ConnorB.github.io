@@ -2,7 +2,7 @@
 
 ## Papers
 
-# 2026
+### 2026
 
 Network connectivity and local hydrology drive DOM composition in a non-perennial stream
 
@@ -12,7 +12,7 @@ Sarah M. Flynn, Rebecca Hale, Erin Seybold, Stephen Plont, Michelle Busch, Alexi
 
 [DOI](https://doi.org/10.1029/2025JG009568)
 
-# 2025
+### 2025
 
 Spatiotemporal variation of ecosystem metabolism in a eutrophic, polymictic reservoir: Water column stability begets metabolism stability
 
@@ -38,7 +38,7 @@ Christopher M. Groff, Sean K. Kinard, J. Derek Hogan, Matt R. Whiles, Amber J. U
 
 [DOI](https://doi.org/10.1080/02705060.2025.2486262)
 
-# 2024
+### 2024
 
 Benthic macroinvertebrate assemblage structure in salinized reaches of the lower Pecos River, Texas
 
@@ -58,7 +58,7 @@ Kelbi D. Delaune, Allison A. Pease, Reynaldo Patiño, **Connor L. Brown**, Matth
 
 ## Datasets
 
-# 2026
+### 2026
 
 AIMS Great Plains, macroinvertebrate sequences (AIMS_GP_MACR)
 
@@ -148,7 +148,7 @@ Shane Creek (Konza Prairie) experiment stream temperature, intermittency, and co
 
 [DOI](https://doi.org/10.4211/hs.c10e6eb12d6042709daa3fb93838ec00)
 
-# 2025
+### 2025
 
 AIMS continuous water quality at King’s Creek outlet (AIMS_KNZ_approach1_EXOS_V1.0)
 
