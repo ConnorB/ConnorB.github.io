@@ -74,14 +74,90 @@ gtag('config', 'G-ELB0F4QNPS', { 'anonymize_ip': true});
 <link rel="manifest" href="./assets/favicon/site.webmanifest">
 <link rel="me" href="https://fediscience.org/@connor">
 <link rel="preload" href="./assets/fonts/inter/InterVariable.woff2" as="font" type="font/woff2" crossorigin="">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ConnorB.github.io/#website",
+      "url": "https://ConnorB.github.io",
+      "name": "Connor Brown",
+      "description": "Aquatic Ecologist | PhD Candidate",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://ConnorB.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ConnorB.github.io/#person",
+      "name": "Connor L. Brown",
+      "givenName": "Connor",
+      "familyName": "Brown",
+      "url": "https://ConnorB.github.io",
+      "image": { "@id": "https://ConnorB.github.io/#primaryimage" },
+      "jobTitle": "PhD Candidate",
+      "description": "Aquatic ecologist studying ecosystem ecology and biogeochemical cycling in non-perennial streams.",
+      "knowsAbout": [
+        "Stream Ecosystem Ecology",
+        "Biogeochemistry",
+        "Hydrology",
+        "Aquatic Ecology",
+        "Carbon Cycling",
+        "Data Science"
+      ],
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Kansas Geological Survey",
+          "url": "https://kgs.ku.edu/water-resources-and-geohydrology"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Kansas",
+          "url": "https://ku.edu"
+        }
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Sam Houston State University" },
+        { "@type": "CollegeOrUniversity", "name": "Texas Tech University" }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0000-0002-9680-8930"
+      },
+      "sameAs": [
+        "https://orcid.org/0000-0002-9680-8930",
+        "https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en",
+        "https://github.com/ConnorB",
+        "https://fediscience.org/@connor",
+        "https://bsky.app/profile/connorbrown.bsky.social",
+        "https://x.com/eco_conn",
+        "https://instagram.com/conbro_"
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://ConnorB.github.io/#primaryimage",
+      "url": "https://ConnorB.github.io/assets/images/shn_deco.webp",
+      "contentUrl": "https://ConnorB.github.io/assets/images/shn_deco.webp",
+      "width": 800,
+      "height": 838,
+      "caption": "Connor with a post puller removing t-post from Shane Creek"
+    }
+  ]
+}
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta property="og:title" content="Publications | Connor Brown">
 <meta property="og:description" content="Peer-reviewed papers, datasets, and in-prep work by Connor L. Brown on stream ecosystem ecology and biogeochemistry.">
+<meta property="og:image" content="https://ConnorB.github.io/assets/images/con-header.webp">
 <meta name="twitter:title" content="Publications | Connor Brown">
 <meta name="twitter:description" content="Peer-reviewed papers, datasets, and in-prep work by Connor L. Brown on stream ecosystem ecology and biogeochemistry.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ConnorB.github.io/assets/images/con-header.webp">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -871,14 +947,15 @@ Ecosystem metabolism of coastal Texas streams across precipitation regimes and l
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Connor Brown</p>
+© <span id="footer-year">2026</span> Connor Brown
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
 <nav class="footer-social" aria-label="Social links">
-<a href="https://github.com/ConnorB" aria-label="GitHub"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://fediscience.org/@connor" rel="me" aria-label="Mastodon"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a href="https://instagram.com/conbro_" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-label="instagram"></i></a> <a href="https://bsky.app/profile/connorbrown.bsky.social" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a href="https://twitter.com/eco_conn" aria-label="X / Twitter"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&amp;hl=en" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i></a> <a href="https://orcid.org/0000-0002-9680-8930" rel="me" aria-label="ORCID"><i class="fa-brands fa-orcid" aria-label="orcid"></i></a>
+<a href="https://github.com/ConnorB" aria-label="GitHub"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://fediscience.org/@connor" rel="me" aria-label="Mastodon"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a href="https://instagram.com/conbro_" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-label="instagram"></i></a> <a href="https://bsky.app/profile/connorbrown.bsky.social" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a href="https://x.com/eco_conn" aria-label="X / Twitter"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&amp;hl=en" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i></a> <a href="https://orcid.org/0000-0002-9680-8930" rel="me" aria-label="ORCID"><i class="fa-brands fa-orcid" aria-label="orcid"></i></a>
 </nav>
 </div>
   </div>

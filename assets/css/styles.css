@@ -1,5 +1,9 @@
 /* css styles */
 
+:root {
+  --social-hover: #0077b6;   /* shared hover color for social/footer links */
+}
+
 /* R package names on the Software page: keep the monospace look but force a
    high-contrast color so they're readable on the dark theme's card background */
 code.pkg-name {
@@ -51,7 +55,7 @@ code.pkg-name {
 }
 
 .social-icons a:hover {
-  color: #0077b6;            /* highlight color on hover */
+  color: var(--social-hover);            /* highlight color on hover */
 }
 
 img.rounded {
@@ -71,7 +75,7 @@ img.rounded {
 }
 
 .footer-social a:hover {
-  color: #0077b6;
+  color: var(--social-hover);
 }
 
 @media (max-width: 767.98px) {
