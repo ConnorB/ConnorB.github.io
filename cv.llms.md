@@ -1,5 +1,5 @@
 # Curriculum Vitae
 
-[ Download PDF](./cbrown_cv.pdf)
+[ Download PDF](./CBrown_CV.pdf)
 
-This browser can’t display embedded PDFs. [Download the CV (PDF)](./cbrown_cv.pdf) instead.
+This browser can’t display embedded PDFs. [Download the CV (PDF)](./CBrown_CV.pdf) instead.
