@@ -13,7 +13,7 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -27,7 +27,7 @@ jobs:
 
       # Pull the latest CV assets from the private ConnorB/CV repo at build time:
       # the YAML that drives the Publications and Teaching pages, and the newest
-      # CV PDF (served at /cbrown_cv.pdf via the "*.pdf" resource in _quarto.yml).
+      # CV PDF (served at /CBrown_CV.pdf via the "*.pdf" resource in _quarto.yml).
       # Nothing from CV is committed to this repo.
       - name: Fetch CV assets from ConnorB/CV
         env:
@@ -67,8 +67,8 @@ jobs:
             exit 1
           fi
           echo "Latest CV PDF: $newest"
-          raw "${api}/pdf/${newest}?ref=main" -o cbrown_cv.pdf
-          ls -lh cbrown_cv.pdf _data/*.yaml
+          raw "${api}/pdf/${newest}?ref=main" -o CBrown_CV.pdf
+          ls -lh CBrown_CV.pdf _data/*.yaml
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
