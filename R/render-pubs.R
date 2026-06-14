@@ -170,7 +170,7 @@ render_entry <- function(e) {
 }
 
 # Compose section HTML
-compose_section <- function(grp, empty_msg, heading_tag = "h1") {
+compose_section <- function(grp, empty_msg, heading_tag = "h3") {
   if (!length(grp$years)) return(sprintf("<p>%s</p>", empty_msg))
   out <- character()
   for (i in seq_along(grp$years)) {

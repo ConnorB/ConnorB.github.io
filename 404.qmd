@@ -1,6 +1,10 @@
 ---
 title: "Page Not Found"
-description: "The page you were looking for doesn't exist."
+description-meta: "The page you were looking for doesn't exist."
+open-graph:
+  description: "The page you were looking for doesn't exist."
+twitter-card:
+  description: "The page you were looking for doesn't exist."
 ---
 
 Sorry, the page you were looking for doesn't exist or has moved.

@@ -2,7 +2,7 @@
 /_site/
 # CV assets (PDF + YAML) are fetched from the private ConnorB/CV repo during
 # CI, not committed here
-/cbrown_cv.pdf
+/CBrown_CV.pdf
 /_data/publications.yaml
 /_data/datasets.yaml
 /_data/teaching.yaml

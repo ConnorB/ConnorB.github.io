@@ -1,11 +1,15 @@
 ---
 title: "Courses"
 description-meta: "Course materials from Connor L. Brown, including an Introduction to R for Field Ecology."
+open-graph:
+  description: "Course materials from Connor L. Brown, including an Introduction to R for Field Ecology."
+twitter-card:
+  description: "Course materials from Connor L. Brown, including an Introduction to R for Field Ecology."
 editor: visual
 toc: true
 number-sections: false
 ---
 
-# Field Ecology
+## Field Ecology
 
 - [Intro to R](courses/field_ecology/intro2r/Intro2RPres.qmd)

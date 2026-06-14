@@ -1,6 +1,10 @@
 ---
 title: "Curriculum Vitae"
 description-meta: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
+open-graph:
+  description: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
+twitter-card:
+  description: "Curriculum vitae of Connor L. Brown: education, research experience, publications, presentations, and funding."
 toc: false
 page-layout: full
 number-sections: false

@@ -1,16 +1,20 @@
 ---
 title: "Teaching"
 description-meta: "Teaching experience of Connor L. Brown: field ecology lectures and ecology/environmental science teaching assistantships."
+open-graph:
+  description: "Teaching experience of Connor L. Brown: field ecology lectures and ecology/environmental science teaching assistantships."
+twitter-card:
+  description: "Teaching experience of Connor L. Brown: field ecology lectures and ecology/environmental science teaching assistantships."
 editor: visual
 toc: true
 number-sections: false
 ---
 
-# Lectures
+## Lectures
 
 [Field Ecology](courses.qmd#field-ecology)
 
-# Teaching Assistant
+## Teaching Assistant
 
 ```{r}
 #| echo: false

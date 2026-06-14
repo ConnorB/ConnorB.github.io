@@ -1,6 +1,10 @@
 ---
 title: "Software"
 description-meta: "Open-source R packages developed and maintained by Connor L. Brown for aquatic ecology and stream data workflows."
+open-graph:
+  description: "Open-source R packages developed and maintained by Connor L. Brown for aquatic ecology and stream data workflows."
+twitter-card:
+  description: "Open-source R packages developed and maintained by Connor L. Brown for aquatic ecology and stream data workflows."
 toc: true
 number-sections: false
 execute:

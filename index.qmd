@@ -1,32 +1,38 @@
 ---
 title: "Connor Brown"
 pagetitle: "Connor Brown"
-description: "Aquatic Ecologist | PhD Candidate | <span class='pride-flag'></span> | He/Him"
+description-meta: "Aquatic Ecologist | PhD Candidate | He/Him"
+open-graph:
+  description: "Aquatic Ecologist | PhD Candidate | He/Him"
+twitter-card:
+  description: "Aquatic Ecologist | PhD Candidate | He/Him"
 page-layout: full
+body-classes: home
 css: assets/css/styles.css
 ---
 
-::::: grid
-::: g-col-4
+<div class="profile-tagline">Aquatic Ecologist | PhD Candidate | <span class="pride-flag" role="img" aria-label="Progress Pride flag"></span> | He/Him</div>
+
+::::: {.grid .profile-grid}
+::: {.g-col-12 .g-col-md-4 .profile-media}
 <img id="rotating-img"
      src="assets/images/shn_deco.webp"
      alt="Connor with a post puller removing t-post from Shane Creek"
-     class="rounded"
-     style="width:100%; height:250px; object-fit:cover; display:block; margin:auto;" />
+     class="rounded profile-photo" />
 
 
-<div class="social-icons">
-[{{< fa brands github >}}](https://github.com/ConnorB){target="_blank"} &nbsp;
-[{{< fa brands mastodon >}}](https://fediscience.org/@connor){target="_blank"} &nbsp;
-[{{< fa brands instagram >}}](https://instagram.com/conbro_){target="_blank"} &nbsp;
-[{{< fa brands bluesky >}}](https://bsky.app/profile/connorbrown.bsky.social){target="_blank"} &nbsp;
-[{{< fa brands twitter >}}](https://x.com/eco_conn){target="_blank"} &nbsp;
-[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en){target="_blank"} &nbsp;
-[{{< fa brands orcid >}}](https://orcid.org/0000-0002-9680-8930){target="_blank"}
-</div>
+<nav class="social-icons" aria-label="Social links">
+  <a href="https://github.com/ConnorB" target="_blank" rel="noopener" aria-label="GitHub">{{< fa brands github >}}</a>
+  <a href="https://fediscience.org/@connor" target="_blank" rel="me noopener" aria-label="Mastodon">{{< fa brands mastodon >}}</a>
+  <a href="https://instagram.com/conbro_" target="_blank" rel="noopener" aria-label="Instagram">{{< fa brands instagram >}}</a>
+  <a href="https://bsky.app/profile/connorbrown.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
+  <a href="https://x.com/eco_conn" target="_blank" rel="noopener" aria-label="X / Twitter">{{< fa brands twitter >}}</a>
+  <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">{{< fa brands google-scholar >}}</a>
+  <a href="https://orcid.org/0000-0002-9680-8930" target="_blank" rel="me noopener" aria-label="ORCID">{{< fa brands orcid >}}</a>
+</nav>
 :::
 
-::: g-col-8
+::: {.g-col-12 .g-col-md-8 .profile-bio}
 I am a PhD Candidate at the [Kansas Geological Survey](https://kgs.ku.edu/water-resources-and-geohydrology) and [Department of Geology](https://geo.ku.edu) at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
 
 I previously completed an M.S. in Biology at Sam Houston State University, where I worked with [Dr. Amber Ulseth](https://nrri.umn.edu/faculty-staff/amber-j-ulseth-phd) on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with [Dr. Allison Pease](https://cafnr.missouri.edu/person/allison-pease/) and [Dr. Kelbi Delaune](https://meadowsresearchinstitute.sulross.edu/people/kelbi-delaune-ph-d/) on Pecos River macroinvertebrate communities.
