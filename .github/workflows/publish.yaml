@@ -1,5 +1,10 @@
 on:
   workflow_dispatch:
+  # Rebuild when the private ConnorB/CV repo updates (new PDF or YAML data).
+  # The CV repo's build_LaTeX workflow sends this event after committing a
+  # fresh PDF, so the published site always reflects the latest CV.
+  repository_dispatch:
+    types: [cv-updated]
   push:
     branches:
       - main
@@ -51,10 +56,11 @@ jobs:
           api="https://api.github.com/repos/ConnorB/CV/contents"
           raw() { curl -fsSL -H "Authorization: Bearer $CV_TOKEN" -H "Accept: application/vnd.github.raw" "$@"; }
 
-          # Data behind the Publications and Teaching pages (read from _data/ by
-          # the R render scripts; software.yaml already lives there, committed).
+          # Data behind the Publications, Teaching, and Software pages (read from
+          # _data/ by the R render scripts). All sourced from ConnorB/CV so the
+          # CV PDF and the website never drift apart.
           mkdir -p _data
-          for y in publications datasets teaching; do
+          for y in publications datasets teaching software; do
             raw "${api}/yaml/${y}.yaml?ref=main" -o "_data/${y}.yaml"
             echo "fetched _data/${y}.yaml"
           done
