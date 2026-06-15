@@ -8,6 +8,8 @@ twitter-card:
 editor: visual
 toc: true
 number-sections: false
+execute:
+  freeze: false
 ---
 
 ## Lectures

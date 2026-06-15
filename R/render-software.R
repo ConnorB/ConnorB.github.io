@@ -15,7 +15,7 @@ render_software_entry <- function(e) {
       lbl_l <- tolower(lbl)
       if (lbl_l %in% c("docs", "website", "documentation", "pkgdown")) "primary"
       else if (lbl_l %in% c("github", "code", "source")) "info"
-      else if (lbl_l %in% c("cran", "r-universe", "r universe")) "success"
+      else if (lbl_l %in% c("cran", "r-universe", "r universe", "doi")) "success"
       else "secondary"
     }
     links <- vapply(e$links, function(li) {
