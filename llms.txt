@@ -2,9 +2,9 @@
 
 ## Pages
 
-- [Connor Brown](https://ConnorB.github.io/index.llms.md)
-- [Teaching](https://ConnorB.github.io/teaching.llms.md)
-- [Software](https://ConnorB.github.io/software.llms.md)
-- [Curriculum Vitae](https://ConnorB.github.io/cv.llms.md)
 - [Courses](https://ConnorB.github.io/courses.llms.md)
+- [Teaching](https://ConnorB.github.io/teaching.llms.md)
+- [Curriculum Vitae](https://ConnorB.github.io/cv.llms.md)
 - [Publications](https://ConnorB.github.io/publications.llms.md)
+- [Software](https://ConnorB.github.io/software.llms.md)
+- [Connor Brown](https://ConnorB.github.io/index.llms.md)
