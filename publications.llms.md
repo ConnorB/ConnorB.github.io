@@ -4,6 +4,14 @@
 
 ### 2026
 
+Climatic rainfall regime shapes energy flow, trophic structure, and secondary production in streams
+
+Bradley A. Strickland, Christopher J. Patrick, J. Derek Hogan, **Connor L. Brown**, Christopher F. Frazier, Christopher M. Groff, Desiree Groff, Sean K. Kinard, Amber J. Ulseth, Vander Zanden, Hannah B., Matt R. Whiles
+
+*Ecology • 2026*
+
+[DOI](https://doi.org/10.1002/ecy.70501)
+
 Network connectivity and local hydrology drive DOM composition in a non-perennial stream
 
 Sarah M. Flynn, Rebecca Hale, Erin Seybold, Stephen Plont, Michelle Busch, Alexi Sommerville, **Connor L. Brown**, Amy J. Burgin
