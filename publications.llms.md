@@ -12,6 +12,14 @@ Bradley A. Strickland, Christopher J. Patrick, J. Derek Hogan, **Connor L. Brown
 
 [DOI](https://doi.org/10.1002/ecy.70501)
 
+Hydrologic, biogeochemical, microbial, and macroinvertebrate responses to network expansion, contraction, and disconnection across headwater stream networks with distinct physiography in Alabama, USA
+
+Stephen Plont, Delaney M. Peterson, Chelsea R. Smith, Charles T. Bond, Andrielle Larissa Kemajou Tchamba, Michelle A. Wolford, Kaci Zarek, Shannon L. Speir, C. Nathan Jones, Jonathan P. Benstead, Michelle H. Busch, Rebecca L. Hale, **Connor L. Brown**, Erin C. Seybold, Arial J. Shogren, Kevin A. Kuehn, Yaqi You, Colin R. Jackson, Amy J. Burgin, Carla L. Atkinson
+
+*Earth System Science Data • 2026*
+
+[DOI](https://doi.org/10.5194/essd-18-4885-2026)
+
 Network connectivity and local hydrology drive DOM composition in a non-perennial stream
 
 Sarah M. Flynn, Rebecca Hale, Erin Seybold, Stephen Plont, Michelle Busch, Alexi Sommerville, **Connor L. Brown**, Amy J. Burgin
@@ -29,14 +37,6 @@ Christopher F. Frazier, **Connor L. Brown**, Megan Hamersky, Thomas Coole, Maris
 *Inland Waters • 2025*
 
 [DOI](https://doi.org/10.1080/20442041.2025.2602550)
-
-Hydrologic, biogeochemical, microbial, and macroinvertebrate responses to network expansion, contraction, and disconnection across headwater stream networks with distinct physiography in Alabama, USA
-
-Stephen Plont, Delaney M. Peterson, Chelsea R. Smith, Charles T. Bond, Andrielle Larissa Kemajou Tchamba, Michelle A. Wolford, Kaci Zarek, Shannon L. Speir, C. Nathan Jones, Jonathan P. Benstead, Michelle H. Busch, Rebecca L. Hale, **Connor L. Brown**, Erin C. Seybold, Arial J. Shogren, Kevin A. Kuehn, Yaqi You, Colin R. Jackson, Amy J. Burgin, Carla L. Atkinson
-
-*Earth System Science Data Discussions • 2025*
-
-[DOI](https://doi.org/10.5194/essd-2025-559)
 
 Precipitation regime drives key alterations in subtropical stream fish community assembly and functional trait distribution across a major rainfall gradient
 
