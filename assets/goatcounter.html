@@ -1,2 +1,18 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href]').forEach(link => {
+    if (!['http:', 'https:'].includes(link.protocol) || link.hasAttribute('data-goatcounter-click')) return;
+    const pdf = /\.pdf$/i.test(link.pathname);
+    if (!pdf && link.origin === location.origin) return;
+    const destination = (link.origin === location.origin ? '' : link.origin) + link.pathname;
+    link.dataset.goatcounterClick = (pdf ? 'download:' : 'outbound:') + destination;
+    link.dataset.goatcounterTitle = link.getAttribute('aria-label') || link.textContent.trim() || destination;
+    link.dataset.goatcounterReferrer = location.pathname;
+    link.dataset.goatcounterNoSession = '1';
+  });
+  // Bind here too in case the async counter loaded before these attributes existed.
+  window.goatcounter?.bind_events?.();
+});
+</script>
 <script data-goatcounter="https://connor.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
