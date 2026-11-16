@@ -1,4 +1,77 @@
 <script>
+window.goatcounter = window.goatcounter || {};
+const referrerLabels = {
+  'bing.com': 'Bing', bing: 'Bing',
+  'google.com': 'Google', google: 'Google',
+  'duckduckgo.com': 'DuckDuckGo', duckduckgo: 'DuckDuckGo', ddg: 'DuckDuckGo',
+  'yahoo.com': 'Yahoo', 'ecosia.org': 'Ecosia',
+  'chatgpt.com': 'ChatGPT', 'chat.openai.com': 'ChatGPT', chatgpt: 'ChatGPT',
+  'claude.ai': 'Claude', 'perplexity.ai': 'Perplexity',
+  'copilot.microsoft.com': 'Copilot', 'gemini.google.com': 'Gemini',
+  'facebook.com': 'Facebook', 'fb.com': 'Facebook', facebook: 'Facebook', fb: 'Facebook',
+  'instagram.com': 'Instagram', instagram: 'Instagram', ig: 'Instagram',
+  'twitter.com': 'X', 'x.com': 'X', 't.co': 'X', twitter: 'X', x: 'X',
+  'threads.net': 'Threads', 'threads.com': 'Threads', threads: 'Threads',
+  'bsky.app': 'Bluesky', 'bsky.social': 'Bluesky', bluesky: 'Bluesky', bsky: 'Bluesky',
+  'mastodon.social': 'Mastodon', 'fediscience.org': 'Mastodon', mastodon: 'Mastodon', mstdn: 'Mastodon',
+  fediverse: 'Fediverse',
+  'linkedin.com': 'LinkedIn', 'lnkd.in': 'LinkedIn',
+  'reddit.com': 'Reddit', 'youtube.com': 'YouTube', 'youtu.be': 'YouTube',
+  'github.com': 'GitHub', 'teams.microsoft.com': 'Microsoft Teams',
+  'teams.public.onecdn.static.microsoft': 'Microsoft Teams',
+};
+const referrerDomains = Object.keys(referrerLabels).filter(domain => domain.includes('.')).sort((a, b) => b.length - a.length);
+
+function normalizeReferrer(referrer) {
+  if (!referrer) return referrer;
+  const source = referrer.trim();
+  if (Object.hasOwn(referrerLabels, source.toLowerCase())) return referrerLabels[source.toLowerCase()];
+  if (source.startsWith('/') && !source.startsWith('//')) return referrer;
+  let url;
+  try {
+    url = new URL(source.startsWith('//') ? 'https:' + source : source.includes('://') ? source : 'https://' + source);
+  } catch {
+    return referrer;
+  }
+  if (!['http:', 'https:'].includes(url.protocol) || url.hostname === location.hostname) return referrer;
+  const host = url.hostname.replace(/^www\./, '').replace(/\.$/, '');
+  for (const domain of referrerDomains) {
+    if (host === domain || host.endsWith('.' + domain)) return referrerLabels[domain];
+  }
+  if (/^(?:[^.]+\.)?google\.(?:[a-z]{2}|co\.[a-z]{2}|com\.[a-z]{2})$/.test(host)) return 'Google';
+  return host.includes('.') ? host : referrer;
+}
+
+window.goatcounter.referrer = normalizeReferrer;
+window.goatcounter.no_onload = true;
+
+function startGoatCounter() {
+  const counter = window.goatcounter;
+  const getData = counter.get_data;
+  counter.get_data = vars => {
+    const data = getData(vars);
+    // GoatCounter's server lets these query parameters override the referrer.
+    if (!data.e) {
+      const query = new URLSearchParams(data.q);
+      for (const key of ['utm_source', 'ref', 'src', 'source']) {
+        if (query.get(key)) query.set(key, normalizeReferrer(query.get(key)));
+      }
+      data.q = query.toString();
+    }
+    return data;
+  };
+  const countPageview = () => {
+    if (document.readyState === 'loading' || ('visibilityState' in document && document.visibilityState !== 'visible')) return;
+    document.removeEventListener('DOMContentLoaded', countPageview);
+    document.removeEventListener('visibilitychange', countPageview);
+    counter.count();
+  };
+  document.addEventListener('DOMContentLoaded', countPageview);
+  document.addEventListener('visibilitychange', countPageview);
+  countPageview();
+  if (!counter.no_events) counter.bind_events();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href]').forEach(link => {
     if (!['http:', 'https:'].includes(link.protocol) || link.hasAttribute('data-goatcounter-click')) return;
@@ -15,4 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <script data-goatcounter="https://connor.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="//gc.zgo.at/count.js" onload="startGoatCounter()"></script>
