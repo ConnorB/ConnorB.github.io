@@ -23,9 +23,10 @@ css: assets/css/styles.css
 
 
 <nav class="social-icons" aria-label="Social links">
-  <a href="https://github.com/ConnorB" target="_blank" rel="noopener" aria-label="GitHub">{{< fa brands github >}}</a>
+  <a href="https://github.com/ConnorB" target="_blank" rel="me noopener" aria-label="GitHub">{{< fa brands github >}}</a>
   <a href="https://fediscience.org/@connor" target="_blank" rel="me noopener" aria-label="Mastodon">{{< fa brands mastodon >}}</a>
   <a href="https://instagram.com/conbro_" target="_blank" rel="noopener" aria-label="Instagram">{{< fa brands instagram >}}</a>
+  <a href="https://threads.com/@conbro_" target="_blank" rel="me noopener" aria-label="Threads">{{< fa brands threads >}}</a>
   <a href="https://bsky.app/profile/connorbrown.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
   <a href="https://x.com/eco_conn" target="_blank" rel="noopener" aria-label="X / Twitter">{{< fa brands twitter >}}</a>
   <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">{{< fa brands google-scholar >}}</a>
