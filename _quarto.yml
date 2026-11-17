@@ -12,7 +12,7 @@ pagetitle: "{{< meta title >}} | Connor Brown"
 author-meta: "Connor Brown"
 
 website:
-  site-url: https://ConnorB.github.io
+  site-url: https://connorb.github.io
   favicon: assets/favicon/favicon.ico
   image: assets/images/con-header.webp  # default social preview for image-less pages
   twitter-card: true
@@ -55,6 +55,7 @@ format:
       - assets/css/custom.scss
     css: assets/css/styles.css
     toc: true
+    canonical-url: true
     include-in-header:
       - assets/favicon/favicon.html
       - assets/site-verification.html

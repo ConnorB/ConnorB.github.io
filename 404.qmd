@@ -1,5 +1,6 @@
 ---
 title: "Page Not Found"
+canonical-url: false
 description-meta: "The page you were looking for doesn't exist."
 open-graph:
   description: "The page you were looking for doesn't exist."

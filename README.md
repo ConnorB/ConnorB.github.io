@@ -1,6 +1,6 @@
 # ConnorB.github.io
 
-Source for my personal website, [ConnorB.github.io](https://ConnorB.github.io). Built with [Quarto](https://quarto.org), rendered with R, and deployed to GitHub Pages via GitHub Actions.
+Source for my personal website, [ConnorB.github.io](https://connorb.github.io). Built with [Quarto](https://quarto.org), rendered with R, and deployed to GitHub Pages via GitHub Actions.
 
 ## Site structure
 
@@ -55,7 +55,7 @@ Pushes to `main` trigger the [`Quarto Publish`](.github/workflows/publish.yaml) 
 2. Fetches the latest CV YAML and newest dated CV PDF from the private `ConnorB/CV` repo using the `CV_TOKEN` secret.
 3. Renders the site and publishes it to the `gh-pages` branch.
 
-GitHub Pages serves `gh-pages` at [ConnorB.github.io](https://ConnorB.github.io).
+GitHub Pages serves `gh-pages` at [ConnorB.github.io](https://connorb.github.io).
 
 ## License
 
