@@ -120,3 +120,10 @@ img.rounded {
     conic-gradient(at 50% 50%, #0000 221.25deg, black 222deg 318deg, #0000 318.25deg),
     linear-gradient(red 0 16.66%, orange 0 33.33%, yellow 0 50%, green 0 66.66%, blue 0 83.33%, indigo 0);
 }
+
+/* Inline SVG icons from _shortcodes/icons.lua (size and color are set on the
+   svg itself): sit on the text baseline like the old icon font did. */
+svg.icon {
+  overflow: visible;
+  vertical-align: -0.125em;
+}
