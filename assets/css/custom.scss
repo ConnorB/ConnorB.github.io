@@ -1,6 +1,6 @@
 /*-- scss:defaults --*/
 
-// Suppress the Bootswatch theme's Lato import; Inter loads from Google Fonts in fonts.html.
+// Suppress the Bootswatch theme's Lato import; Inter loads from Google Fonts in _includes/fonts.html.
 $web-font-path: false;
 
 $font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

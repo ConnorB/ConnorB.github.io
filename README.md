@@ -20,8 +20,9 @@ The site is a Quarto website (`_quarto.yml`) using the `darkly` theme with custo
 
 - [`R/`](R/) — rendering helpers sourced by the `.qmd` pages. [`render-pubs.R`](R/render-pubs.R) holds shared utilities (HTML escaping, link buttons, year grouping) reused by [`render-software.R`](R/render-software.R) and [`render-cv.R`](R/render-cv.R).
 - [`_data/`](_data/) — YAML driving the content-heavy pages (`publications.yaml`, `datasets.yaml`, `teaching.yaml`, `software.yaml`). The R scripts read these and emit HTML.
-- [`assets/`](assets/) — CSS/SCSS, fonts, favicon, and images.
-- [`_extensions/`](_extensions/) — vendored Quarto extensions (Font Awesome).
+- [`assets/`](assets/) — CSS/SCSS, favicon, and images.
+- [`_includes/`](_includes/) — HTML added to every page's `<head>` (favicon links, site verification, Google Fonts, structured data, GoatCounter). Kept outside `assets/` so they aren't published as pages.
+- [`_shortcodes/icons.lua`](_shortcodes/icons.lua) — inline SVG icons and the social profile list used in the footer and on the homepage.
 - [`_freeze/`](_freeze/) — Quarto's frozen computation cache (`freeze: auto`).
 - [`courses/`](courses/) — standalone course materials.
 

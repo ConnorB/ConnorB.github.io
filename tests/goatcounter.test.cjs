@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const { readFileSync } = require('node:fs');
 const { runInNewContext } = require('node:vm');
 
-const html = readFileSync(`${__dirname}/../assets/goatcounter.html`, 'utf8');
+const html = readFileSync(`${__dirname}/../_includes/goatcounter.html`, 'utf8');
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const location = new URL('https://connorb.github.io/cv.html?private=value');
 

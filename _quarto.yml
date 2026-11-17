@@ -10,12 +10,17 @@ execute:
 # Metadata stuff
 pagetitle: "{{< meta title >}} | Connor Brown"
 author-meta: "Connor Brown"
+# Link-preview image for every page. JPG at 1200x630 so LinkedIn and other
+# apps that skip WebP still show it; set image/image-alt on a page to override.
+image: assets/images/social-preview.jpg
+image-alt: "Connor standing in Kings Creek doing sensor maintenance"
 
 website:
   site-url: https://connorb.github.io
   favicon: assets/favicon/favicon.ico
-  image: assets/images/con-header.webp  # default social preview for image-less pages
-  twitter-card: true
+  twitter-card:
+    creator: "@eco_conn"
+    site: "@eco_conn"
   open-graph: true
   llms-txt: true
   search: false
@@ -38,16 +43,10 @@ website:
       © <span id="footer-year">2026</span> Connor Brown
       <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
     right: |
-      <nav class="footer-social" aria-label="Social links">
-        <a href="https://github.com/ConnorB" target="_blank" rel="me noopener" aria-label="GitHub">{{< fa brands github >}}</a>
-        <a href="https://fediscience.org/@connor" target="_blank" rel="me noopener" aria-label="Mastodon">{{< fa brands mastodon >}}</a>
-        <a href="https://instagram.com/conbro_" target="_blank" rel="noopener" aria-label="Instagram">{{< fa brands instagram >}}</a>
-        <a href="https://threads.com/@conbro_" target="_blank" rel="me noopener" aria-label="Threads">{{< fa brands threads >}}</a>
-        <a href="https://bsky.app/profile/connorbrown.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
-        <a href="https://x.com/eco_conn" target="_blank" rel="noopener" aria-label="X / Twitter">{{< fa brands twitter >}}</a>
-        <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">{{< fa brands google-scholar >}}</a>
-        <a href="https://orcid.org/0000-0002-9680-8930" target="_blank" rel="me noopener" aria-label="ORCID">{{< fa brands orcid >}}</a>
-      </nav>
+      {{< social-links class="footer-social" >}}
+# icon and social-links shortcodes; edit social profiles in this Lua file.
+shortcodes:
+  - _shortcodes/icons.lua
 format:
   html:
     theme:
@@ -57,8 +56,8 @@ format:
     toc: true
     canonical-url: true
     include-in-header:
-      - assets/favicon/favicon.html
-      - assets/site-verification.html
-      - assets/css/fonts.html
-      - assets/structured-data.html
-      - assets/goatcounter.html
+      - _includes/favicon.html
+      - _includes/site-verification.html
+      - _includes/fonts.html
+      - _includes/structured-data.html
+      - _includes/goatcounter.html

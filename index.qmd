@@ -23,27 +23,22 @@ css: assets/css/styles.css
      class="rounded profile-photo" />
 
 
-<nav class="social-icons" aria-label="Social links">
-  <a href="https://github.com/ConnorB" target="_blank" rel="me noopener" aria-label="GitHub">{{< fa brands github >}}</a>
-  <a href="https://fediscience.org/@connor" target="_blank" rel="me noopener" aria-label="Mastodon">{{< fa brands mastodon >}}</a>
-  <a href="https://instagram.com/conbro_" target="_blank" rel="noopener" aria-label="Instagram">{{< fa brands instagram >}}</a>
-  <a href="https://threads.com/@conbro_" target="_blank" rel="me noopener" aria-label="Threads">{{< fa brands threads >}}</a>
-  <a href="https://bsky.app/profile/connorbrown.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
-  <a href="https://x.com/eco_conn" target="_blank" rel="noopener" aria-label="X / Twitter">{{< fa brands twitter >}}</a>
-  <a href="https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">{{< fa brands google-scholar >}}</a>
-  <a href="https://orcid.org/0000-0002-9680-8930" target="_blank" rel="me noopener" aria-label="ORCID">{{< fa brands orcid >}}</a>
-</nav>
+{{< social-links >}}
 :::
 
 ::: {.g-col-12 .g-col-md-8 .profile-bio}
-I am a PhD Candidate at the [Kansas Geological Survey](https://kgs.ku.edu/water-resources-and-geohydrology) and [Department of Geology](https://geo.ku.edu) at the University of Kansas in [Dr. Erin Seybold’s](http://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
+I am a PhD Candidate at the [Kansas Geological Survey](https://kgs.ku.edu/water-resources-and-geohydrology) and [Department of Geology](https://geo.ku.edu) at the University of Kansas in [Dr. Erin Seybold’s](https://www.erinseybold.com/) lab, where I study ecosystem ecology and biogeochemical cycling in non-perennial streams as part of the Aquatic Intermittency Effects on Microbiomes in Streams (AIMS) project.
 
-I previously completed an M.S. in Biology at Sam Houston State University, where I worked with [Dr. Amber Ulseth](https://nrri.umn.edu/faculty-staff/amber-j-ulseth-phd) on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with [Dr. Allison Pease](https://cafnr.missouri.edu/person/allison-pease/) and [Dr. Kelbi Delaune](https://meadowsresearchinstitute.sulross.edu/people/kelbi-delaune-ph-d/) on Pecos River macroinvertebrate communities.
+I previously completed an M.S. in Biology at Sam Houston State University, where I worked with [Dr. Amber Ulseth](https://nrri.umn.edu/faculty-staff/amber-j-ulseth-phd) on linking land use and precipitation regime changes to stream metabolism in subtropical Texas coastal streams. Before that, I earned a B.S. in Natural Resource Management (Fisheries and Aquatic Biology) at Texas Tech University, working with [Dr. Allison Pease](https://cafnr.missouri.edu/directory/allison-pease/) and [Dr. Kelbi Delaune](https://meadowsresearchinstitute.sulross.edu/people/kelbi-delaune-ph-d/) on Pecos River macroinvertebrate communities.
 
 My research focuses on carbon cycling in non-perennial streams. I am broadly interested in stream ecosystem ecology, hydrology, biogeochemistry, and data science.
 :::
 :::::
 <img src="assets/images/con-header.webp"
+     srcset="assets/images/con-header-800.webp 800w,
+             assets/images/con-header-1200.webp 1200w,
+             assets/images/con-header.webp 1600w"
+     sizes="(min-width: 1200px) 1135px, calc(100vw - 3rem)"
      class="img-fluid figure-img d-block mx-auto"
      width="1600" height="721"
      loading="lazy" decoding="async"
