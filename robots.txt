@@ -1,6 +1,9 @@
-# robots.txt for ConnorB.github.io
+# robots.txt for connorb.github.io
 
 User-agent: *
 Allow: /
 
-Sitemap: https://ConnorB.github.io/sitemap.xml
+Sitemap: https://connorb.github.io/sitemap.xml
+# R package sites (pkgdown), published from their own repositories
+Sitemap: https://connorb.github.io/preMetabolizer/sitemap.xml
+Sitemap: https://connorb.github.io/flowcam/sitemap.xml
