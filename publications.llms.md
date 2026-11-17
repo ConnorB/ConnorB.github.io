@@ -158,7 +158,7 @@ Shane Creek (Konza Prairie) experiment stream temperature, intermittency, and co
 
 ### 2025
 
-AIMS continuous water quality at King’s Creek outlet (AIMS_KNZ_approach1_EXOS_V1.0)
+AIMS continuous water quality at King's Creek outlet (AIMS_KNZ_approach1_EXOS_V1.0)
 
 **Connor L. Brown**, Sarah Flynn, Amy Burgin, Erin Seybold
 
