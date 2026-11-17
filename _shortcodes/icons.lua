@@ -1,5 +1,5 @@
 -- Inline SVG icons, plus the social profile links shown in the footer and on
--- the homepage. Inline SVGs replace the Font Awesome icon font, so pages don't
+-- the homepage (listed under `social-links` in _quarto.yml). Inline SVGs replace the Font Awesome icon font, so pages don't
 -- download a 116-270 KB font for a handful of icons.
 --
 --   {{< icon download >}}                       one icon
@@ -22,19 +22,10 @@ local icons = {
   ["download"] = { viewBox = "0 0 512 512", d = "M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" },
 }
 
--- Profiles in display order. me = true adds rel="me" (two-way identity links
--- for Mastodon, Threads, GitHub, and ORCID). Keep the structured data's
--- "sameAs" list in _includes/structured-data.html in sync.
-local social_links = {
-  { label = "GitHub",         icon = "github",         url = "https://github.com/ConnorB", me = true },
-  { label = "Mastodon",       icon = "mastodon",       url = "https://fediscience.org/@connor", me = true },
-  { label = "Instagram",      icon = "instagram",      url = "https://instagram.com/conbro_" },
-  { label = "Threads",        icon = "threads",        url = "https://threads.com/@conbro_", me = true },
-  { label = "Bluesky",        icon = "bluesky",        url = "https://bsky.app/profile/connorbrown.bsky.social" },
-  { label = "X / Twitter",    icon = "twitter",        url = "https://x.com/eco_conn" },
-  { label = "Google Scholar", icon = "google-scholar", url = "https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" },
-  { label = "ORCID",          icon = "orcid",          url = "https://orcid.org/0000-0002-9680-8930", me = true },
-}
+-- The profiles themselves live under `social-links` in _quarto.yml, which also
+-- feeds the structured data's "sameAs" list (_filters/structured-data.lua).
+-- me: true adds rel="me" (two-way identity links for Mastodon, Threads,
+-- GitHub, and ORCID).
 
 local function escape(s)
   return (s:gsub("&", "&amp;"):gsub('"', "&quot;"):gsub("<", "&lt;"):gsub(">", "&gt;"))
@@ -74,11 +65,14 @@ return {
     local class = pandoc.utils.stringify(kwargs["class"] or "")
     if class == "" then class = "social-icons" end
     local items = {}
-    for _, link in ipairs(social_links) do
-      items[#items + 1] = '  <a href="' .. escape(link.url) .. '" target="_blank" rel="' ..
-        (link.me and "me noopener" or "noopener") .. '" aria-label="' .. escape(link.label) ..
-        '">' .. svg(link.icon) .. '</a>'
+    for _, link in ipairs(meta["social-links"] or {}) do
+      local me = link.me == true
+      items[#items + 1] = '  <a href="' .. escape(pandoc.utils.stringify(link.url)) ..
+        '" target="_blank" rel="' .. (me and "me noopener" or "noopener") ..
+        '" aria-label="' .. escape(pandoc.utils.stringify(link.label)) ..
+        '">' .. svg(pandoc.utils.stringify(link.icon)) .. '</a>'
     end
+    if #items == 0 then error("No social-links found in _quarto.yml") end
     return raw('<nav class="' .. escape(class) .. '" aria-label="Social links">\n' ..
       table.concat(items, "\n") .. '\n</nav>', context)
   end,

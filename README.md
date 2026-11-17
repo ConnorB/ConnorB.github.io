@@ -22,17 +22,18 @@ The site is a Quarto website (`_quarto.yml`) using the `darkly` theme with custo
 - [`_data/`](_data/) — YAML driving the content-heavy pages (`publications.yaml`, `datasets.yaml`, `teaching.yaml`, `software.yaml`). The R scripts read these and emit HTML.
 - [`assets/`](assets/) — CSS/SCSS, favicon, and images.
 - [`_includes/`](_includes/) — HTML added to every page's `<head>` (favicon links, site verification, Google Fonts, structured data, GoatCounter). Kept outside `assets/` so they aren't published as pages.
-- [`_shortcodes/icons.lua`](_shortcodes/icons.lua) — inline SVG icons and the social profile list used in the footer and on the homepage.
+- [`_shortcodes/icons.lua`](_shortcodes/icons.lua) — inline SVG icons and the `social-links` shortcode used in the footer and on the homepage.
+- [`_filters/structured-data.lua`](_filters/structured-data.lua) — adds the JSON-LD structured data to each page.
+
+Social profiles are listed once, under `social-links` in `_quarto.yml`; the shortcode and the structured data's `sameAs` list both read from there.
 - [`_freeze/`](_freeze/) — Quarto's frozen computation cache (`freeze: auto`).
 - [`courses/`](courses/) — standalone course materials.
 
 ## Data flow: the private CV repo
 
-Most CV content is **not committed here**. The Publications and Teaching data (`_data/publications.yaml`, `_data/datasets.yaml`, `_data/teaching.yaml`) and the CV PDF (`CBrown_CV.pdf`) are fetched at build time from the private [`ConnorB/CV`](https://github.com/ConnorB/CV) repo, keeping this site as the single rendering layer while the CV stays separate. These paths are `.gitignore`d.
+Most CV content is **not committed here**. The Publications, Teaching, and Software data (`_data/publications.yaml`, `_data/datasets.yaml`, `_data/teaching.yaml`, `_data/software.yaml`) and the CV PDF (`CBrown_CV.pdf`) are fetched at build time from the private [`ConnorB/CV`](https://github.com/ConnorB/CV) repo, keeping this site as the single rendering layer while the CV stays separate. These paths are `.gitignore`d.
 
-`software.yaml` is the exception — it lives in this repo directly.
-
-This means a fresh local clone won't have publications/teaching/CV data until those files are present. The render scripts warn (rather than hard-fail) when a YAML file is missing, so the rest of the site still previews locally.
+This means a fresh local clone won't have publications/teaching/software/CV data until those files are present. The render scripts warn (rather than hard-fail) when a YAML file is missing, so the rest of the site still previews locally.
 
 ## Building locally
 
@@ -46,7 +47,7 @@ quarto preview
 quarto render
 ```
 
-To populate the Publications, Teaching, and CV pages locally, drop the corresponding YAML files into `_data/` and a `CBrown_CV.pdf` at the repo root (or supply them however the CI does — see below).
+To populate the Publications, Teaching, Software, and CV pages locally, drop the corresponding YAML files into `_data/` and a `CBrown_CV.pdf` at the repo root (or supply them however the CI does — see below).
 
 ## Deployment
 

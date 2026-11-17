@@ -1,5 +1,8 @@
 /.quarto/
 /_site/
+# Library copies Quarto writes when it re-executes a frozen page; it rebuilds
+# them from its own install, so only the results in _freeze/ need committing.
+/_freeze/site_libs/
 *_files/
 _quarto_internal_scss_error.scss
 .DS_Store

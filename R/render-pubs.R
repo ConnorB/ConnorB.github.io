@@ -10,6 +10,8 @@ esc <- function(x) {
   x <- gsub("&", "&amp;", x, fixed = TRUE)
   x <- gsub("<", "&lt;",  x, fixed = TRUE)
   x <- gsub(">", "&gt;",  x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
+  x <- gsub("'", "&#39;",  x, fixed = TRUE)
   x
 }
 
@@ -114,7 +116,7 @@ btn <- function(label, href, style = "secondary") {
   if (is.null(href) || identical(href, "")) return("")
   sprintf(
     '<a class="btn btn-sm btn-%s me-2" href="%s" target="_blank" rel="noopener">%s</a>',
-    style, href, label
+    esc(style), esc(href), esc(label)
   )
 }
 

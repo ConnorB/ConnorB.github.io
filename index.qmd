@@ -17,6 +17,8 @@ css: assets/css/styles.css
 ::: {.g-col-12 .g-col-md-4 .profile-media}
 <img id="rotating-img"
      src="assets/images/shn_deco.webp"
+     srcset="assets/images/shn_deco-480.webp 480w, assets/images/shn_deco.webp 800w"
+     sizes="(min-width: 768px) 365px, min(calc(100vw - 3rem), 420px)"
      alt="Connor with a post puller removing t-post from Shane Creek"
      width="800" height="838"
      fetchpriority="high"
@@ -59,11 +61,19 @@ My research focuses on carbon cycling in non-perennial streams. I am broadly int
 
     // Fetch only the next photo, and only after the page has finished loading,
     // so it doesn't compete with the first view but is ready before the swap.
-    const preload = i => { new Image().src = images[i].src; };
+    // Each photo has a 480px-wide copy next to the 800px original; the
+    // browser picks one using the sizes attribute already on the <img>.
+    const srcsetFor = src => `${src.replace(".webp", "-480.webp")} 480w, ${src} 800w`;
+    const preload = i => {
+      const img = new Image();
+      img.sizes = imgEl.sizes;
+      img.srcset = srcsetFor(images[i].src);
+    };
     let index = 0, timer = null;
     const nextIndex = () => (index + 1) % images.length;
     const advance = () => {
       index = nextIndex();
+      imgEl.srcset = srcsetFor(images[index].src);
       imgEl.src = images[index].src;
       imgEl.alt = images[index].alt;
       preload(nextIndex());

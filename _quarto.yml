@@ -8,14 +8,31 @@ execute:
   freeze: auto
   
 # Metadata stuff
+# Page titles are "<page> | Connor Brown". The empty title-prefix stops Quarto
+# from also appending " – <website title>".
 pagetitle: "{{< meta title >}} | Connor Brown"
+title-prefix: ""
 author-meta: "Connor Brown"
 # Link-preview image for every page. JPG at 1200x630 so LinkedIn and other
 # apps that skip WebP still show it; set image/image-alt on a page to override.
 image: assets/images/social-preview.jpg
 image-alt: "Connor standing in Kings Creek doing sensor maintenance"
 
+# Social profiles, in display order. Used by the social-links shortcode
+# (footer and homepage) and by the structured data's "sameAs" list.
+# me: true adds rel="me" for two-way identity verification.
+social-links:
+  - { label: "GitHub",         icon: github,         url: "https://github.com/ConnorB", me: true }
+  - { label: "Mastodon",       icon: mastodon,       url: "https://fediscience.org/@connor", me: true }
+  - { label: "Instagram",      icon: instagram,      url: "https://instagram.com/conbro_" }
+  - { label: "Threads",        icon: threads,        url: "https://threads.com/@conbro_", me: true }
+  - { label: "Bluesky",        icon: bluesky,        url: "https://bsky.app/profile/connorbrown.bsky.social" }
+  - { label: "X / Twitter",    icon: twitter,        url: "https://x.com/eco_conn" }
+  - { label: "Google Scholar", icon: google-scholar, url: "https://scholar.google.com/citations?user=ppjBxFEAAAAJ&hl=en" }
+  - { label: "ORCID",          icon: orcid,          url: "https://orcid.org/0000-0002-9680-8930", me: true }
+
 website:
+  title: "Connor Brown"
   site-url: https://connorb.github.io
   favicon: assets/favicon/favicon.ico
   twitter-card:
@@ -26,6 +43,7 @@ website:
   search: false
   # Navbar with social links
   navbar:
+    title: false  # no brand link; "About" already points home
     left:
       - text: About
         href: index.qmd
@@ -44,7 +62,7 @@ website:
       <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
     right: |
       {{< social-links class="footer-social" >}}
-# icon and social-links shortcodes; edit social profiles in this Lua file.
+# icon and social-links shortcodes.
 shortcodes:
   - _shortcodes/icons.lua
 format:
@@ -55,9 +73,12 @@ format:
     css: assets/css/styles.css
     toc: true
     canonical-url: true
+    # Adds the JSON-LD from _includes/structured-data.html to <head>, filling
+    # its "sameAs" list from social-links above.
+    filters:
+      - _filters/structured-data.lua
     include-in-header:
       - _includes/favicon.html
       - _includes/site-verification.html
       - _includes/fonts.html
-      - _includes/structured-data.html
       - _includes/goatcounter.html

@@ -7,7 +7,12 @@ author: "Connor Brown"
 format:
   revealjs:
     theme: ku.scss
-    logo: https://logos-world.net/wp-content/uploads/2023/12/Kansas-Jayhawks-Logo-1912.png
+    logo: ../../../assets/images/Kansas-Jayhawks-Logo-1912.png
+    # Fonts used by ku.scss (Oswald's heaviest weight is 700). embed-resources
+    # downloads them at render time and stores them inside the deck's HTML.
+    include-in-header:
+      text: |
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 execute:
   fig-width: 6
   fig-height: 4
